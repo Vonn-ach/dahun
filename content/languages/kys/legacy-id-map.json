@@ -1,5 +1,7 @@
 {
+  "$schema": "../../../schemas/legacy-id-map.schema.json",
   "_note": "Maps ids from the original single-file Dahun Kayan trainer (backup format app:'dahun-kayan') to lexicon entry ids. Used by backup import.",
+  "app": "dahun-kayan",
   "map": {
     "greet:nun-dengah": "kys-0001",
     "greet:sayu-ka-akui": "kys-0002",

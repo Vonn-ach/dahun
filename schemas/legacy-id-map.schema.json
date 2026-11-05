@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dahun.app/schemas/legacy-id-map.schema.json",
+  "title": "Optional map from an older app's item ids to lexicon entry ids, used when importing old backups (D010)",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "_note": { "type": "string" },
+    "app": { "type": "string", "minLength": 1, "description": "The backup's `app` value this map applies to" },
+    "map": {
+      "type": "object",
+      "propertyNames": { "type": "string", "minLength": 1 },
+      "additionalProperties": { "$ref": "common.schema.json#/$defs/entryId" }
+    }
+  },
+  "required": ["app", "map"],
+  "additionalProperties": false
+}

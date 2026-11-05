@@ -32,7 +32,8 @@
       },
       "description": {
         "en": "Attested in both dialects, or the dialect is not yet known. Speakers should confirm."
-      }
+      },
+      "selectable": false
     }
   ],
   "defaultDialect": "baram",
@@ -51,11 +52,14 @@
         "`",
         "ʻ"
       ],
-      "stripDiacritics": true,
+      "stripDiacritics": false,
       "ignorePunctuation": "?!.,…",
       "ignoreInLooseMatch": [
         "'"
-      ]
+      ],
+      "looseEquivalents": {
+        "é": "e"
+      }
     }
   },
   "uiPhrases": {

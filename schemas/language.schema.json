@@ -21,7 +21,8 @@
           "id": { "$ref": "common.schema.json#/$defs/slug" },
           "name": { "$ref": "common.schema.json#/$defs/localizedBoth" },
           "iso": { "$ref": "common.schema.json#/$defs/iso" },
-          "description": { "$ref": "common.schema.json#/$defs/localized" }
+          "description": { "$ref": "common.schema.json#/$defs/localized" },
+          "selectable": { "type": "boolean", "default": true, "description": "false for labels such as 'shared / not yet checked' that a learner cannot choose as their dialect" }
         },
         "required": ["id", "name"],
         "additionalProperties": false
@@ -40,7 +41,13 @@
             "unifyApostrophes": { "type": "array", "items": { "type": "string" } },
             "stripDiacritics": { "type": "boolean" },
             "ignorePunctuation": { "type": "string" },
-            "ignoreInLooseMatch": { "type": "array", "items": { "type": "string" } }
+            "ignoreInLooseMatch": { "type": "array", "items": { "type": "string" } },
+            "looseEquivalents": {
+              "type": "object",
+              "description": "Characters treated as equal only in the loose ('close') match, e.g. {\"é\": \"e\"}, so a missing accent gets a spelling nudge instead of counting as exact",
+              "propertyNames": { "type": "string", "minLength": 1 },
+              "additionalProperties": { "type": "string" }
+            }
           },
           "required": ["lowercase"],
           "additionalProperties": false
