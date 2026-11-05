@@ -6,13 +6,17 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 - Phase: 1 (MVP build)
 - Current prompt: 01 (scaffold) is done. The app runs with placeholder screens for every route. Lint, typecheck, unit tests (46), e2e (Pixel 360×800 + Desktop) and the build all pass locally.
-- Repo: https://github.com/Vonn-ach/dahun (public). The scaffold commit is local only, not pushed yet, so CI has not run on GitHub.
+- Repo: https://github.com/Vonn-ach/dahun (public). The scaffold (`d1f059b`) is pushed and CI passed on GitHub: every step, including Playwright (run 42051982333).
 
 ## Next up
 
-1. **Push and watch CI** (about 5 minutes): `git push`, then check the Actions tab on GitHub turns green. CI is `.github/workflows/ci.yml`.
-2. **Prompt 02 (content pipeline).** It replaces the `validate:content` and `build:draft` stubs, and brings in Ajv. Also update the status rules in `docs/CONTENT_MODEL.md` (D008) and apply the schema changes in D013.
+1. **Try the app on a phone** (optional, 2 minutes): `npm run dev`, then open the `Network:` URL on the same Wi-Fi.
+2. **Prompt 02 (content pipeline)** in a fresh session. It replaces the `validate:content` and `build:draft` stubs, and brings in Ajv. Also update the status rules in `docs/CONTENT_MODEL.md` (D008) and apply the schema changes in D013. The owner decides whether Kayan uses `looseEquivalents` (a missing é counts as "close" instead of correct).
 3. Book the first speaker verification session (`speaker-kit/SESSION_GUIDE.md`) and take the speaker questions below.
+
+## Windows notes
+
+- If PowerShell says "running scripts is disabled", either use `npm.cmd …` or run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` once. The owner did the second on 2026-11-05.
 
 ## Notes from prompt 01 (scaffold)
 
@@ -64,7 +68,7 @@ Only speakers can answer these. Claude must not guess. Corrections go into `cont
 ## Session log
 
 <!-- newest first: date · prompt · what changed · commit -->
-- 2026-11-05 · 01 scaffold · Vite + React + TS app with all 7 routes and placeholder screens, responsive nav (bottom bar on phones, top bar on desktop), design tokens (light/dark + `data-theme`), self-hosted fonts, UI kit (Button, Card, Chip, Badge, ProgressBeads), i18n (en/ms + `useT()`), ESLint/Prettier/Vitest/Playwright, CI workflow; CLAUDE.md layout (D014) and golden rule 4 (D007) updated · "chore: scaffold app, tooling, CI"
+- 2026-11-05 · 01 scaffold · Vite + React + TS app with all 7 routes and placeholder screens, responsive nav (bottom bar on phones, top bar on desktop), design tokens (light/dark + `data-theme`), self-hosted fonts, UI kit (Button, Card, Chip, Badge, ProgressBeads), i18n (en/ms + `useT()`), ESLint/Prettier/Vitest/Playwright, CI workflow; CLAUDE.md layout (D014) and golden rule 4 (D007) updated · d1f059b (CI green on GitHub)
 - 2026-11-05 · setup · Pushed to github.com/Vonn-ach/dahun. The first three commits were re-signed with the GitHub noreply address before the first push, so their hashes changed.
 - 2026-11-05 · setup · Node.js 26.13.0 LTS installed with winget. fnm (Fast Node Manager) was already installed but held no Node versions; it is still there and doesn't interfere.
 - 2026-11-05 · 00 kickoff · Read all docs, schemas and the Kayan seed; reported 31 issues; recorded decisions D007–D014 and the speaker questions; initialised the git repo · fb89b6b
