@@ -6,17 +6,16 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 - Phase: 0 (set up)
 - Current prompt: 00 (kickoff) is done. Decisions D007–D014 are in `docs/DECISIONS.md`.
-- Repo: initialised locally on `main`. Not pushed to GitHub yet.
+- Repo: https://github.com/Vonn-ach/dahun (public). `main` is pushed and tracks `origin/main`. Commits use the GitHub noreply address.
 
 ## Next up
 
-1. **Prompt 01 (scaffold).** Node.js v26.13.0 (LTS) and npm 11.20.0 are installed in `C:\Program Files\nodejs\`. Restart the Claude app before starting, so its terminals pick up the new PATH. In prompt 01, also:
+1. **Prompt 01 (scaffold).** Node.js v26.13.0 (LTS) and npm 11.20.0 are installed in `C:\Program Files\nodejs\` and on the PATH. In prompt 01, also:
    - pin `.nvmrc` to `26` (the installed LTS)
    - rename `src/features/review/` to `src/features/practice/` and add `words/` and `credits/` (D014)
    - update `CLAUDE.md`: the folder layout (D014) and the wording of golden rule 4 (D007)
    - add `.prettierignore` and `.gitattributes` (D014)
-2. Push to GitHub: create an empty public repo called `dahun`, then run `git remote add origin <repo url>` and `git push -u origin main`.
-3. Book the first speaker verification session (`speaker-kit/SESSION_GUIDE.md`) and take the speaker questions below.
+2. Book the first speaker verification session (`speaker-kit/SESSION_GUIDE.md`) and take the speaker questions below.
 
 ## Blockers / questions for the owner
 
@@ -53,6 +52,7 @@ Only speakers can answer these. Claude must not guess. Corrections go into `cont
 ## Session log
 
 <!-- newest first: date · prompt · what changed · commit -->
+- 2026-11-05 · setup · Pushed to github.com/Vonn-ach/dahun. The first three commits were re-signed with the GitHub noreply address before the first push, so their hashes changed.
 - 2026-11-05 · setup · Node.js 26.13.0 LTS installed with winget. fnm (Fast Node Manager) was already installed but held no Node versions; it is still there and doesn't interfere.
-- 2026-11-05 · 00 kickoff · Read all docs, schemas and the Kayan seed; reported 31 issues; recorded decisions D007–D014 and the speaker questions; initialised the git repo · commit "docs: kickoff decisions"
-- 2026-11-05 · kit · Starter kit added (docs, prompts, schemas, Kayan seed, speaker kit) · e7e6ca2
+- 2026-11-05 · 00 kickoff · Read all docs, schemas and the Kayan seed; reported 31 issues; recorded decisions D007–D014 and the speaker questions; initialised the git repo · fb89b6b
+- 2026-11-05 · kit · Starter kit added (docs, prompts, schemas, Kayan seed, speaker kit) · cff0437
