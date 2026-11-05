@@ -1,0 +1,9 @@
+node_modules/
+dist/
+src/generated/
+.env
+.env.local
+
+# Never commit raw recordings, consent forms or private speaker details
+audio-raw/
+private/

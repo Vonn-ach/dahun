@@ -1,0 +1,778 @@
+{
+  "$schema": "../../../schemas/course.schema.json",
+  "language": "kys",
+  "units": [
+    {
+      "id": "greetings",
+      "title": {
+        "en": "Greetings & courtesy",
+        "ms": "Salam & budi bahasa"
+      },
+      "taglineEntries": [
+        "kys-0001"
+      ],
+      "lessons": [
+        {
+          "id": "greetings-1",
+          "title": {
+            "en": "Greetings & courtesy 1",
+            "ms": "Salam & budi bahasa 1"
+          },
+          "introduce": [
+            "kys-0001",
+            "kys-0002",
+            "kys-0003",
+            "kys-0004",
+            "kys-0005",
+            "kys-0006"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "greetings-2",
+          "title": {
+            "en": "Greetings & courtesy 2",
+            "ms": "Salam & budi bahasa 2"
+          },
+          "introduce": [
+            "kys-0007",
+            "kys-0008",
+            "kys-0009",
+            "kys-0010",
+            "kys-0011",
+            "kys-0012"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "greetings-3",
+          "title": {
+            "en": "Greetings & courtesy 3",
+            "ms": "Salam & budi bahasa 3"
+          },
+          "introduce": [
+            "kys-0013",
+            "kys-0014",
+            "kys-0015",
+            "kys-0016",
+            "kys-0017",
+            "kys-0018"
+          ],
+          "sentences": []
+        }
+      ]
+    },
+    {
+      "id": "numbers",
+      "title": {
+        "en": "Numbers",
+        "ms": "Nombor"
+      },
+      "taglineEntries": [
+        "kys-0019",
+        "kys-0020",
+        "kys-0021"
+      ],
+      "lessons": [
+        {
+          "id": "numbers-1",
+          "title": {
+            "en": "Numbers 1",
+            "ms": "Nombor 1"
+          },
+          "introduce": [
+            "kys-0019",
+            "kys-0020",
+            "kys-0021",
+            "kys-0022",
+            "kys-0023"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "numbers-2",
+          "title": {
+            "en": "Numbers 2",
+            "ms": "Nombor 2"
+          },
+          "introduce": [
+            "kys-0024",
+            "kys-0025",
+            "kys-0026",
+            "kys-0027",
+            "kys-0028"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "numbers-3",
+          "title": {
+            "en": "Numbers 3",
+            "ms": "Nombor 3"
+          },
+          "introduce": [
+            "kys-0029",
+            "kys-0030",
+            "kys-0031",
+            "kys-0032",
+            "kys-0033"
+          ],
+          "sentences": []
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "title": {
+        "en": "People & pronouns",
+        "ms": "Orang & kata ganti nama"
+      },
+      "taglineEntries": [
+        "kys-0034",
+        "kys-0035"
+      ],
+      "lessons": [
+        {
+          "id": "people-1",
+          "title": {
+            "en": "People & pronouns 1",
+            "ms": "Orang & kata ganti nama 1"
+          },
+          "introduce": [
+            "kys-0034",
+            "kys-0035",
+            "kys-0036",
+            "kys-0037",
+            "kys-0038"
+          ],
+          "sentences": [
+            "kys-s001",
+            "kys-s002"
+          ]
+        },
+        {
+          "id": "people-2",
+          "title": {
+            "en": "People & pronouns 2",
+            "ms": "Orang & kata ganti nama 2"
+          },
+          "introduce": [
+            "kys-0039",
+            "kys-0040",
+            "kys-0041",
+            "kys-0042",
+            "kys-0043"
+          ],
+          "sentences": [
+            "kys-s003"
+          ]
+        },
+        {
+          "id": "people-3",
+          "title": {
+            "en": "People & pronouns 3",
+            "ms": "Orang & kata ganti nama 3"
+          },
+          "introduce": [
+            "kys-0044",
+            "kys-0045",
+            "kys-0046",
+            "kys-0047",
+            "kys-0048"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "people-4",
+          "title": {
+            "en": "People & pronouns 4",
+            "ms": "Orang & kata ganti nama 4"
+          },
+          "introduce": [
+            "kys-0049",
+            "kys-0050",
+            "kys-0051",
+            "kys-0052",
+            "kys-0053"
+          ],
+          "sentences": []
+        }
+      ]
+    },
+    {
+      "id": "food",
+      "title": {
+        "en": "Food & drink",
+        "ms": "Makanan & minuman"
+      },
+      "taglineEntries": [
+        "kys-0054"
+      ],
+      "lessons": [
+        {
+          "id": "food-1",
+          "title": {
+            "en": "Food & drink 1",
+            "ms": "Makanan & minuman 1"
+          },
+          "introduce": [
+            "kys-0054",
+            "kys-0055",
+            "kys-0056",
+            "kys-0057",
+            "kys-0058",
+            "kys-0059"
+          ],
+          "sentences": [
+            "kys-s006",
+            "kys-s007"
+          ]
+        },
+        {
+          "id": "food-2",
+          "title": {
+            "en": "Food & drink 2",
+            "ms": "Makanan & minuman 2"
+          },
+          "introduce": [
+            "kys-0060",
+            "kys-0061",
+            "kys-0062",
+            "kys-0063",
+            "kys-0064",
+            "kys-0065"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "food-3",
+          "title": {
+            "en": "Food & drink 3",
+            "ms": "Makanan & minuman 3"
+          },
+          "introduce": [
+            "kys-0066",
+            "kys-0067",
+            "kys-0068",
+            "kys-0069",
+            "kys-0070"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "food-4",
+          "title": {
+            "en": "Food & drink 4",
+            "ms": "Makanan & minuman 4"
+          },
+          "introduce": [
+            "kys-0071",
+            "kys-0072",
+            "kys-0073",
+            "kys-0074",
+            "kys-0075"
+          ],
+          "sentences": []
+        }
+      ]
+    },
+    {
+      "id": "time",
+      "title": {
+        "en": "Time & days",
+        "ms": "Masa & hari"
+      },
+      "taglineEntries": [
+        "kys-0085"
+      ],
+      "lessons": [
+        {
+          "id": "time-1",
+          "title": {
+            "en": "Time & days 1",
+            "ms": "Masa & hari 1"
+          },
+          "introduce": [
+            "kys-0076",
+            "kys-0077",
+            "kys-0078",
+            "kys-0079",
+            "kys-0080"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "time-2",
+          "title": {
+            "en": "Time & days 2",
+            "ms": "Masa & hari 2"
+          },
+          "introduce": [
+            "kys-0081",
+            "kys-0082",
+            "kys-0083",
+            "kys-0084",
+            "kys-0085"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "time-3",
+          "title": {
+            "en": "Time & days 3",
+            "ms": "Masa & hari 3"
+          },
+          "introduce": [
+            "kys-0086",
+            "kys-0087",
+            "kys-0088",
+            "kys-0089",
+            "kys-0090"
+          ],
+          "sentences": [
+            "kys-s010"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body",
+      "title": {
+        "en": "Body",
+        "ms": "Anggota badan"
+      },
+      "taglineEntries": [
+        "kys-0091",
+        "kys-0092"
+      ],
+      "lessons": [
+        {
+          "id": "body-1",
+          "title": {
+            "en": "Body 1",
+            "ms": "Anggota badan 1"
+          },
+          "introduce": [
+            "kys-0091",
+            "kys-0092",
+            "kys-0093",
+            "kys-0094",
+            "kys-0095",
+            "kys-0096"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "body-2",
+          "title": {
+            "en": "Body 2",
+            "ms": "Anggota badan 2"
+          },
+          "introduce": [
+            "kys-0097",
+            "kys-0098",
+            "kys-0099",
+            "kys-0100",
+            "kys-0101"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "body-3",
+          "title": {
+            "en": "Body 3",
+            "ms": "Anggota badan 3"
+          },
+          "introduce": [
+            "kys-0102",
+            "kys-0103",
+            "kys-0104",
+            "kys-0105",
+            "kys-0106"
+          ],
+          "sentences": []
+        }
+      ]
+    },
+    {
+      "id": "nature",
+      "title": {
+        "en": "Nature & animals",
+        "ms": "Alam & haiwan"
+      },
+      "taglineEntries": [
+        "kys-0113"
+      ],
+      "lessons": [
+        {
+          "id": "nature-1",
+          "title": {
+            "en": "Nature & animals 1",
+            "ms": "Alam & haiwan 1"
+          },
+          "introduce": [
+            "kys-0107",
+            "kys-0108",
+            "kys-0109",
+            "kys-0110",
+            "kys-0111",
+            "kys-0112"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "nature-2",
+          "title": {
+            "en": "Nature & animals 2",
+            "ms": "Alam & haiwan 2"
+          },
+          "introduce": [
+            "kys-0113",
+            "kys-0114",
+            "kys-0115",
+            "kys-0116",
+            "kys-0117",
+            "kys-0118"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "nature-3",
+          "title": {
+            "en": "Nature & animals 3",
+            "ms": "Alam & haiwan 3"
+          },
+          "introduce": [
+            "kys-0119",
+            "kys-0120",
+            "kys-0121",
+            "kys-0122",
+            "kys-0123",
+            "kys-0124"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "nature-4",
+          "title": {
+            "en": "Nature & animals 4",
+            "ms": "Alam & haiwan 4"
+          },
+          "introduce": [
+            "kys-0125",
+            "kys-0126",
+            "kys-0127",
+            "kys-0128",
+            "kys-0129"
+          ],
+          "sentences": []
+        }
+      ]
+    },
+    {
+      "id": "describing",
+      "title": {
+        "en": "Describing & colours",
+        "ms": "Sifat & warna"
+      },
+      "taglineEntries": [
+        "kys-0130",
+        "kys-0131"
+      ],
+      "lessons": [
+        {
+          "id": "describing-1",
+          "title": {
+            "en": "Describing & colours 1",
+            "ms": "Sifat & warna 1"
+          },
+          "introduce": [
+            "kys-0130",
+            "kys-0131",
+            "kys-0132",
+            "kys-0133",
+            "kys-0134"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "describing-2",
+          "title": {
+            "en": "Describing & colours 2",
+            "ms": "Sifat & warna 2"
+          },
+          "introduce": [
+            "kys-0135",
+            "kys-0136",
+            "kys-0137",
+            "kys-0138",
+            "kys-0139"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "describing-3",
+          "title": {
+            "en": "Describing & colours 3",
+            "ms": "Sifat & warna 3"
+          },
+          "introduce": [
+            "kys-0140",
+            "kys-0141",
+            "kys-0142",
+            "kys-0143",
+            "kys-0144"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "describing-4",
+          "title": {
+            "en": "Describing & colours 4",
+            "ms": "Sifat & warna 4"
+          },
+          "introduce": [
+            "kys-0145",
+            "kys-0146",
+            "kys-0147",
+            "kys-0148",
+            "kys-0149"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "describing-5",
+          "title": {
+            "en": "Describing & colours 5",
+            "ms": "Sifat & warna 5"
+          },
+          "introduce": [
+            "kys-0150",
+            "kys-0151",
+            "kys-0152",
+            "kys-0153",
+            "kys-0154"
+          ],
+          "sentences": []
+        }
+      ]
+    },
+    {
+      "id": "actions",
+      "title": {
+        "en": "Everyday actions",
+        "ms": "Perbuatan harian"
+      },
+      "taglineEntries": [
+        "kys-0163"
+      ],
+      "lessons": [
+        {
+          "id": "actions-1",
+          "title": {
+            "en": "Everyday actions 1",
+            "ms": "Perbuatan harian 1"
+          },
+          "introduce": [
+            "kys-0155",
+            "kys-0156",
+            "kys-0157",
+            "kys-0158",
+            "kys-0159",
+            "kys-0160"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "actions-2",
+          "title": {
+            "en": "Everyday actions 2",
+            "ms": "Perbuatan harian 2"
+          },
+          "introduce": [
+            "kys-0161",
+            "kys-0162",
+            "kys-0163",
+            "kys-0164",
+            "kys-0165",
+            "kys-0166"
+          ],
+          "sentences": [
+            "kys-s013"
+          ]
+        },
+        {
+          "id": "actions-3",
+          "title": {
+            "en": "Everyday actions 3",
+            "ms": "Perbuatan harian 3"
+          },
+          "introduce": [
+            "kys-0167",
+            "kys-0168",
+            "kys-0169",
+            "kys-0170",
+            "kys-0171"
+          ],
+          "sentences": [
+            "kys-s004"
+          ]
+        },
+        {
+          "id": "actions-4",
+          "title": {
+            "en": "Everyday actions 4",
+            "ms": "Perbuatan harian 4"
+          },
+          "introduce": [
+            "kys-0172",
+            "kys-0173",
+            "kys-0174",
+            "kys-0175",
+            "kys-0176"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "actions-5",
+          "title": {
+            "en": "Everyday actions 5",
+            "ms": "Perbuatan harian 5"
+          },
+          "introduce": [
+            "kys-0177",
+            "kys-0178",
+            "kys-0179",
+            "kys-0180",
+            "kys-0181"
+          ],
+          "sentences": [
+            "kys-s012"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "questions",
+      "title": {
+        "en": "Questions & little words",
+        "ms": "Soalan & kata kecil"
+      },
+      "taglineEntries": [
+        "kys-0182",
+        "kys-0183"
+      ],
+      "lessons": [
+        {
+          "id": "questions-1",
+          "title": {
+            "en": "Questions & little words 1",
+            "ms": "Soalan & kata kecil 1"
+          },
+          "introduce": [
+            "kys-0182",
+            "kys-0183",
+            "kys-0184",
+            "kys-0185",
+            "kys-0186"
+          ],
+          "sentences": [
+            "kys-s008",
+            "kys-s011"
+          ]
+        },
+        {
+          "id": "questions-2",
+          "title": {
+            "en": "Questions & little words 2",
+            "ms": "Soalan & kata kecil 2"
+          },
+          "introduce": [
+            "kys-0187",
+            "kys-0188",
+            "kys-0189",
+            "kys-0190",
+            "kys-0191"
+          ],
+          "sentences": [
+            "kys-s014"
+          ]
+        },
+        {
+          "id": "questions-3",
+          "title": {
+            "en": "Questions & little words 3",
+            "ms": "Soalan & kata kecil 3"
+          },
+          "introduce": [
+            "kys-0192",
+            "kys-0193",
+            "kys-0194",
+            "kys-0195"
+          ],
+          "sentences": []
+        }
+      ]
+    },
+    {
+      "id": "culture",
+      "title": {
+        "en": "Culture & places",
+        "ms": "Budaya & tempat"
+      },
+      "taglineEntries": [
+        "kys-0199"
+      ],
+      "lessons": [
+        {
+          "id": "culture-1",
+          "title": {
+            "en": "Culture & places 1",
+            "ms": "Budaya & tempat 1"
+          },
+          "introduce": [
+            "kys-0196",
+            "kys-0197",
+            "kys-0198",
+            "kys-0199",
+            "kys-0200"
+          ],
+          "sentences": []
+        },
+        {
+          "id": "culture-2",
+          "title": {
+            "en": "Culture & places 2",
+            "ms": "Budaya & tempat 2"
+          },
+          "introduce": [
+            "kys-0201",
+            "kys-0202",
+            "kys-0203",
+            "kys-0204",
+            "kys-0205"
+          ],
+          "sentences": [
+            "kys-s005",
+            "kys-s009"
+          ]
+        },
+        {
+          "id": "culture-3",
+          "title": {
+            "en": "Culture & places 3",
+            "ms": "Budaya & tempat 3"
+          },
+          "introduce": [
+            "kys-0206",
+            "kys-0207",
+            "kys-0208",
+            "kys-0209",
+            "kys-0210"
+          ],
+          "sentences": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dahun.app/schemas/course.schema.json",
+  "title": "Course structure: units and lessons",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "language": { "$ref": "common.schema.json#/$defs/iso" },
+    "units": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/slug" },
+          "title": { "$ref": "common.schema.json#/$defs/localizedBoth" },
+          "taglineEntries": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/entryId" } },
+          "lessons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": { "$ref": "common.schema.json#/$defs/slug" },
+                "title": { "$ref": "common.schema.json#/$defs/localizedBoth" },
+                "introduce": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/entryId" }, "minItems": 1 },
+                "sentences": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/sentenceId" } }
+              },
+              "required": ["id", "title", "introduce"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["id", "title", "lessons"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["language", "units"],
+  "additionalProperties": false
+}

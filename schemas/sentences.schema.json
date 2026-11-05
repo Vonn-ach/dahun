@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dahun.app/schemas/sentences.schema.json",
+  "title": "Sentences for word-bank and example use",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "language": { "$ref": "common.schema.json#/$defs/iso" },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/sentenceId" },
+          "tokens": { "type": "array", "items": { "type": "string", "minLength": 1 }, "minItems": 1 },
+          "text": { "type": "string", "minLength": 1 },
+          "gloss": { "$ref": "common.schema.json#/$defs/localizedBoth" },
+          "dialect": { "type": "string" },
+          "uses": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/entryId" } },
+          "sources": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "constructed": { "type": "boolean" },
+          "status": { "$ref": "common.schema.json#/$defs/status" },
+          "review": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/review" } },
+          "audio": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/audio" } }
+        },
+        "required": ["id", "tokens", "text", "gloss", "dialect", "uses", "sources", "constructed", "status"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["language", "entries"],
+  "additionalProperties": false
+}

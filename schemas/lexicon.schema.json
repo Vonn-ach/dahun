@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dahun.app/schemas/lexicon.schema.json",
+  "title": "Lexicon: sources and entries",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "language": { "$ref": "common.schema.json#/$defs/iso" },
+    "sources": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "title": { "type": "string" },
+          "author": { "type": "string" },
+          "year": { "type": "integer" },
+          "url": { "type": "string", "format": "uri" },
+          "dialect": { "type": ["string", "null"] },
+          "licence": { "type": "string" },
+          "notes": { "type": "string" }
+        },
+        "required": ["title", "licence"],
+        "additionalProperties": false
+      }
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/entryId" },
+          "form": { "type": "string", "minLength": 1 },
+          "kind": { "enum": ["word", "phrase"] },
+          "pos": { "enum": ["noun", "verb", "adjective", "pronoun", "number", "question", "particle", "phrase", "other"] },
+          "gloss": { "$ref": "common.schema.json#/$defs/localizedBoth" },
+          "dialect": { "type": "string" },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "form": { "type": "string", "minLength": 1 },
+                "dialect": { "type": "string" },
+                "note": { "type": "string" }
+              },
+              "required": ["form"],
+              "additionalProperties": false
+            }
+          },
+          "note": { "$ref": "common.schema.json#/$defs/localized" },
+          "sources": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "constructed": { "type": "boolean" },
+          "status": { "$ref": "common.schema.json#/$defs/status" },
+          "review": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/review" } },
+          "audio": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/audio" } },
+          "malayCognate": { "type": "boolean" },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        },
+        "required": ["id", "form", "kind", "gloss", "dialect", "sources", "constructed", "status"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["language", "sources", "entries"],
+  "additionalProperties": false
+}

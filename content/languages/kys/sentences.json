@@ -1,0 +1,368 @@
+{
+  "$schema": "../../../schemas/sentences.schema.json",
+  "language": "kys",
+  "entries": [
+    {
+      "id": "kys-s001",
+      "tokens": [
+        "Akui",
+        "nyalam",
+        "ika'"
+      ],
+      "text": "Akui nyalam ika'.",
+      "gloss": {
+        "en": "I love you.",
+        "ms": "Saya sayang awak."
+      },
+      "dialect": "belaga",
+      "uses": [
+        "kys-0034",
+        "kys-0035"
+      ],
+      "sources": [
+        "blog-belaga"
+      ],
+      "constructed": false,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s002",
+      "tokens": [
+        "Akui",
+        "liveng",
+        "ika'"
+      ],
+      "text": "Akui liveng ika'.",
+      "gloss": {
+        "en": "I miss you.",
+        "ms": "Saya rindu awak."
+      },
+      "dialect": "belaga",
+      "uses": [
+        "kys-0034",
+        "kys-0035"
+      ],
+      "sources": [
+        "blog-belaga"
+      ],
+      "constructed": false,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s003",
+      "tokens": [
+        "Akei",
+        "asi",
+        "kui"
+      ],
+      "text": "Akei asi kui.",
+      "gloss": {
+        "en": "I'm sorry.",
+        "ms": "Saya minta maaf."
+      },
+      "dialect": "general",
+      "uses": [
+        "kys-0043"
+      ],
+      "sources": [
+        "blog-baram",
+        "blog-belaga"
+      ],
+      "constructed": false,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s004",
+      "tokens": [
+        "Akui",
+        "jan",
+        "jam"
+      ],
+      "text": "Akui jan jam.",
+      "gloss": {
+        "en": "I don't know.",
+        "ms": "Saya tak tahu."
+      },
+      "dialect": "belaga",
+      "uses": [
+        "kys-0034",
+        "kys-0171"
+      ],
+      "sources": [
+        "blog-belaga"
+      ],
+      "constructed": false,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s005",
+      "tokens": [
+        "Haruk",
+        "aya'"
+      ],
+      "text": "Haruk aya'.",
+      "gloss": {
+        "en": "A big boat.",
+        "ms": "Perahu besar."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0203",
+        "kys-0132"
+      ],
+      "sources": [
+        "southwell-1980"
+      ],
+      "constructed": false,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s006",
+      "tokens": [
+        "Akui",
+        "kuman",
+        "kanen"
+      ],
+      "text": "Akui kuman kanen.",
+      "gloss": {
+        "en": "I eat rice.",
+        "ms": "Saya makan nasi."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0034",
+        "kys-0054",
+        "kys-0056"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s007",
+      "tokens": [
+        "Akui",
+        "du'i",
+        "kupi'"
+      ],
+      "text": "Akui du'i kupi'.",
+      "gloss": {
+        "en": "I drink coffee.",
+        "ms": "Saya minum kopi."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0034",
+        "kys-0055",
+        "kys-0059"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s008",
+      "tokens": [
+        "Ika'",
+        "tei",
+        "hino'"
+      ],
+      "text": "Ika' tei hino'?",
+      "gloss": {
+        "en": "Where are you going?",
+        "ms": "Awak hendak ke mana?"
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0035",
+        "kys-0155",
+        "kys-0183"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s009",
+      "tokens": [
+        "Akui",
+        "tei",
+        "pasen",
+        "jima"
+      ],
+      "text": "Akui tei pasen jima.",
+      "gloss": {
+        "en": "I'm going to town tomorrow.",
+        "ms": "Saya pergi ke pekan esok."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0034",
+        "kys-0155",
+        "kys-0202",
+        "kys-0077"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s010",
+      "tokens": [
+        "Akui",
+        "uh",
+        "kuman"
+      ],
+      "text": "Akui uh kuman.",
+      "gloss": {
+        "en": "I have already eaten.",
+        "ms": "Saya sudah makan."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0034",
+        "kys-0087",
+        "kys-0054"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s011",
+      "tokens": [
+        "Masik",
+        "anih",
+        "heling"
+      ],
+      "text": "Masik anih heling.",
+      "gloss": {
+        "en": "This fish is delicious.",
+        "ms": "Ikan ini sedap."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0060",
+        "kys-0186",
+        "kys-0069"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s012",
+      "tokens": [
+        "Akui",
+        "ngenep",
+        "du'i",
+        "ata'"
+      ],
+      "text": "Akui ngenep du'i ata'.",
+      "gloss": {
+        "en": "I want to drink water.",
+        "ms": "Saya mahu minum air."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0034",
+        "kys-0178",
+        "kys-0055",
+        "kys-0058"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s013",
+      "tokens": [
+        "Daha'",
+        "nyadui",
+        "danih"
+      ],
+      "text": "Daha' nyadui danih.",
+      "gloss": {
+        "en": "They work today.",
+        "ms": "Mereka bekerja hari ini."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0040",
+        "kys-0163",
+        "kys-0076"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    },
+    {
+      "id": "kys-s014",
+      "tokens": [
+        "Aso'",
+        "anan",
+        "aya'"
+      ],
+      "text": "Aso' anan aya'.",
+      "gloss": {
+        "en": "That dog is big.",
+        "ms": "Anjing itu besar."
+      },
+      "dialect": "baram",
+      "uses": [
+        "kys-0121",
+        "kys-0187",
+        "kys-0132"
+      ],
+      "sources": [
+        "compiled-2026"
+      ],
+      "constructed": true,
+      "status": "draft",
+      "review": [],
+      "audio": []
+    }
+  ]
+}

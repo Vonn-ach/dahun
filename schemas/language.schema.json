@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://dahun.app/schemas/language.schema.json",
+  "title": "Language pack metadata",
+  "type": "object",
+  "properties": {
+    "$schema": { "type": "string" },
+    "code": { "$ref": "common.schema.json#/$defs/iso" },
+    "name": {
+      "type": "object",
+      "properties": { "native": { "type": "string" }, "en": { "type": "string" }, "ms": { "type": "string" } },
+      "required": ["en", "ms"],
+      "additionalProperties": false
+    },
+    "region": { "type": "string" },
+    "dialects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "$ref": "common.schema.json#/$defs/slug" },
+          "name": { "$ref": "common.schema.json#/$defs/localizedBoth" },
+          "iso": { "$ref": "common.schema.json#/$defs/iso" },
+          "description": { "$ref": "common.schema.json#/$defs/localized" }
+        },
+        "required": ["id", "name"],
+        "additionalProperties": false
+      }
+    },
+    "defaultDialect": { "type": "string" },
+    "orthography": {
+      "type": "object",
+      "properties": {
+        "notes": { "$ref": "common.schema.json#/$defs/localized" },
+        "highlight": { "type": "array", "items": { "type": "string" }, "description": "Characters the UI highlights, e.g. the glottal stop" },
+        "normalization": {
+          "type": "object",
+          "properties": {
+            "lowercase": { "type": "boolean" },
+            "unifyApostrophes": { "type": "array", "items": { "type": "string" } },
+            "stripDiacritics": { "type": "boolean" },
+            "ignorePunctuation": { "type": "string" },
+            "ignoreInLooseMatch": { "type": "array", "items": { "type": "string" } }
+          },
+          "required": ["lowercase"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["normalization"],
+      "additionalProperties": false
+    },
+    "uiPhrases": {
+      "type": "object",
+      "description": "Short target-language phrases the UI may show, referenced by entry id",
+      "additionalProperties": { "$ref": "common.schema.json#/$defs/entryId" }
+    },
+    "credits": {
+      "type": "object",
+      "properties": {
+        "partner": { "type": ["string", "null"] },
+        "speakers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "code": { "type": "string", "pattern": "^SPK[0-9]{2,3}$" },
+              "credit": { "type": "string", "description": "Exactly as the speaker asked to be credited: a name, initials, or 'Anonymous'" },
+              "dialect": { "type": "string" }
+            },
+            "required": ["code", "credit"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["speakers"],
+      "additionalProperties": false
+    },
+    "status": { "enum": ["planning", "draft", "beta", "live"] }
+  },
+  "required": ["code", "name", "dialects", "defaultDialect", "orthography", "uiPhrases", "credits", "status"],
+  "additionalProperties": false
+}
