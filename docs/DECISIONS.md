@@ -28,3 +28,57 @@ Short records of choices that shape the project. Add one whenever you pick betwe
 ### D006: No punitive gamification
 **Decision:** No hearts or lives, and no streak that resets. Show practice days and beads instead.
 **Why:** Better retention for anxious and neurodivergent learners, and it matches the values of the project.
+
+### D007: A labelled draft preview may be public
+**Context:** Every seed entry is `draft`, so the release build has no lessons until speakers verify them. The demo, testers and the Phase 1 gate need a working app before then.
+**Decision:** `main` deploys the release build (verified content only). A preview deployment of `build:draft` is allowed if it has a permanent "Preview: unverified content" banner, a draft badge on every draft entry, and `noindex` (meta tag and `X-Robots-Tag` header). The link is shared directly with testers and speakers and is not promoted as "the app". The Phase 1 gate is checked on this preview build.
+**Why:** Golden rule 4 protects learners from trusting unchecked forms. A clearly labelled, unindexed preview keeps that promise while the build track moves ahead of the content track.
+**Rejected:** No demo until content is verified (blocks testing for months); a password-protected preview (extra setup and friction for speakers).
+**Follow-up:** Golden rule 4 in `CLAUDE.md` says drafts show "only in dev builds". Reword it to "dev builds and the labelled preview" (prompt 01).
+
+### D008: `verified` means two speakers
+**Decision:** An entry becomes `verified` only when two different speakers have said "ok" to its current form. The "one speaker plus a reliable source" path in `docs/CONTENT_MODEL.md` is dropped. A beta build for testers may include `speaker-checked` entries (`RELEASE_ALLOW_SPEAKER_CHECKED=1`) and shows a visible "beta" label.
+**Why:** It matches the PRD success measure, "reliable source" was never defined, and the rule is simple enough for prompt 10 to apply automatically.
+**Follow-up:** Update the status rules in `docs/CONTENT_MODEL.md` (prompt 02).
+
+### D009: Dialect display in Phase 1
+**Decision:** The main form shown is always the entry's `form`. Variants that carry a dialect are shown as a labelled line (for example "Belaga: …"), and every variant is accepted as a typed answer. The learner's dialect choice changes only the badges, which recording plays, and the onboarding question (Baram / Belaga / Not sure, which means Baram). `general` cannot be chosen as a dialect.
+**Why:** The PRD (notes), the content model (variants) and the teaching design (standalone entries with a badge) each described Belaga differently. One rule is needed now. A main form that follows the dialect changes the expected answer in every exercise, and is better designed with Belaga speakers involved. The engine's `FormRef.variant` keeps that option open.
+**Rejected for now:** A dialect-aware main form.
+
+### D010: Keep the legacy trainer import, without language-specific code
+**Decision:** Prompt 05 keeps importing backups from the old single-file trainer (`app: "dahun-kayan"`). The id map becomes an optional file any pack may have, `legacy-id-map.json`, with an `app` field and its own schema. The importer uses the pack whose map matches the backup's `app`. No code mentions `kys` or its folder.
+**Why:** Real learners have old backups. Golden rule 5.
+**Needs:** A real backup file from the owner (or the meaning and time units of `b, d, c, w, s, u`) before prompt 05.
+
+### D011: Engine rules that settle gaps in PEDAGOGY.md
+**Decision:**
+- **Box movement:** only the first graded answer to an item in a session moves its Leitner box. Any wrong answer in the session sends it to box 1, due in 4 hours. Later answers in the same session count only for XP and the summary.
+- **type-word:** in a lesson, after 2 correct answers to that entry in the session. In practice rounds, at box 3 or higher.
+- **Lesson length:** 10–14 graded steps. Intro cards are extra, and match-pairs counts as one step. Not every entry gets every exercise type.
+- **Typed answers:** whitespace is trimmed and collapsed, and only the characters in `ignorePunctuation` are removed (never a general Unicode punctuation class, which would also remove the glottal stop). If the normalised answer equals another entry's form or variant, the result is `wrong` with `confusedWith`, and the feedback shows both words.
+- **Distractors:** the same `kind` is required. Then prefer the same unit and `pos`, then the same unit, then the same `pos`, then anything. Never use a distractor with the same loose form as the target, or whose gloss shares a part (split on `/ , ;`) or main word with the target's gloss.
+- **XP and boxes:** combo bonus of +2 for each correct answer in a row after the first, capped at +10. Box 6 stays at 6.
+- **Sentences:** sentences are progress items of their own and don't move entry boxes. build-sentence is offered only when every entry in its `uses` has been seen or is in the current lesson. Tokens are displayed exactly as in the content, including the capital on the first one.
+- **listen-pick** ships with audio (prompt 06, Phase 2). The `Exercise` type includes it from the start.
+**Why:** PEDAGOGY's lesson anatomy and its exercise table disagreed on when typing starts. Without the box rule, one lesson could push new words to 4-day intervals. The loose-match rule stops a different real word (such as one differing only by a glottal stop) from being marked correct.
+
+### D012: Release builds drop content that would be left incomplete
+**Decision:** `build-content` drops lessons with fewer than 3 included entries, units left with no lessons, sentences whose own status is not included, and any `uiPhrases` or `taglineEntries` that point at excluded entries. The UI then falls back to its i18n text (for example "Correct!"). The engine only receives entries that are in the bundle, so an excluded form can never appear, not even as a wrong option.
+**Why:** Filtering by status can leave references dangling and lessons too small for match-pairs or distractors.
+
+### D013: Schema and validator changes for prompt 02
+These change schemas and metadata only, never language text.
+- `review[]` items gain `form`: the form the speaker reviewed. A review counts towards status only while it matches the current form.
+- `dialects[]` items gain `selectable` (default `true`). `defaultDialect` must be selectable. Kayan's `general` gets `selectable: false`.
+- `orthography.normalization` gains an optional `looseEquivalents` map (for example `{"é": "e"}`), so a missing accent can count as "close" instead of "exact". Whether Kayan uses it is the owner's decision.
+- The `audio.file` pattern accepts sentence ids and an optional take number: `^[a-z]{3}-(?:[0-9]{4}|s[0-9]{3,4})__SPK[0-9]{2,3}(_[0-9]+)?\.(m4a|mp3|ogg|webm)$`.
+- `audio[]` items gain `form`: which written form the clip says (it must equal `form` or one of the variants).
+- `legacy-id-map.json` gets a schema (see D010).
+- The validator uses Ajv's 2020-12 build with `ajv-formats`, skips `audio/` and `proposals/` when discovering files, and also checks: the id prefix matches the pack code; no non-ASCII apostrophes in forms; a sentence identical to a lexicon phrase (warning); overlapping glosses within a unit, not only identical ones (warning).
+- The speaker verification sheet is generated from the content files, with a notes column, instead of being edited by hand.
+
+### D014: Folder names and repo hygiene
+**Decision:** `src/features/review/` becomes `src/features/practice/` (route `/practice`). Add `src/features/words/` and `src/features/credits/`. Prompt 10's speaker tool lives in `src/features/speaker-review/`. `.prettierignore` covers `content/ schemas/ docs/ prompts/ speaker-kit/`, and `.gitattributes` sets `* text=auto eol=lf`.
+**Why:** "Review" already means speaker verification (`review[]`, `/review`). Keeping Prettier and Windows line endings away from content and docs keeps diffs small enough to check by eye.
+**Follow-up:** Update the layout in `CLAUDE.md` (prompt 01).
