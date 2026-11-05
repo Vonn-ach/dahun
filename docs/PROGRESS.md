@@ -10,13 +10,13 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 ## Next up
 
-1. **Try the app on a phone** (optional, 2 minutes): `npm run dev`, then open the `Network:` URL on the same Wi-Fi.
-2. **Prompt 02 (content pipeline)** in a fresh session. It replaces the `validate:content` and `build:draft` stubs, and brings in Ajv. Also update the status rules in `docs/CONTENT_MODEL.md` (D008) and apply the schema changes in D013. The owner decides whether Kayan uses `looseEquivalents` (a missing é counts as "close" instead of correct).
-3. Book the first speaker verification session (`speaker-kit/SESSION_GUIDE.md`) and take the speaker questions below.
+1. **Prompt 02 (content pipeline)** in a fresh session. It replaces the `validate:content` and `build:draft` stubs, and brings in Ajv. Also update the status rules in `docs/CONTENT_MODEL.md` (D008) and apply the schema changes in D013. The owner decides whether Kayan uses `looseEquivalents` (a missing é counts as "close" instead of correct).
+2. Book the first speaker verification session (`speaker-kit/SESSION_GUIDE.md`) and take the speaker questions below.
 
 ## Windows notes
 
 - If PowerShell says "running scripts is disabled", either use `npm.cmd …` or run `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` once. The owner did the second on 2026-11-05.
+- **Testing on a phone:** run `npm run dev -- --host` (plain `npm run dev` is laptop-only), then open `http://<laptop IP>:5173` on the same Wi-Fi. This needs two Windows settings: the Wi-Fi set to a Private network, and the "Node.js JavaScript Runtime" firewall rule allowed on Private. Both were set up on 2026-11-05, and the scaffold loaded on the owner's phone.
 
 ## Notes from prompt 01 (scaffold)
 
