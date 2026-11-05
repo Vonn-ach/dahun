@@ -1,0 +1,51 @@
+{
+  "app.name": "Dahun",
+  "app.tagline": "Belajar bahasa-bahasa Borneo",
+  "app.documentTitle": "{page} · {app}",
+  "app.skipToContent": "Langkau ke kandungan utama",
+
+  "nav.label": "Utama",
+  "nav.home": "Dahun, laluan pembelajaran",
+  "nav.learn": "Belajar",
+  "nav.practice": "Latihan",
+  "nav.words": "Perkataan",
+  "nav.progress": "Kemajuan",
+  "nav.settings": "Tetapan",
+
+  "path.title": "Laluan pembelajaran",
+  "path.placeholder": "Unit dan pelajaran anda akan dipaparkan di sini.",
+  "path.sampleLesson": "Buka contoh pelajaran",
+
+  "lesson.title": "Pelajaran",
+  "lesson.placeholder": "Pelajaran ini belum siap.",
+  "lesson.backToPath": "Kembali ke laluan pembelajaran",
+
+  "practice.title": "Latihan",
+  "practice.placeholder": "Pusingan ulang kaji yang pendek akan dipaparkan di sini.",
+
+  "words.title": "Perkataan",
+  "words.placeholder": "Perkataan yang pernah anda temui akan disenaraikan di sini.",
+
+  "progress.title": "Kemajuan",
+  "progress.placeholder": "Hari latihan dan manik anda akan dipaparkan di sini.",
+
+  "settings.title": "Tetapan",
+  "settings.placeholder": "Tetapan bahasa, tema dan mod tenang akan dipaparkan di sini.",
+  "settings.credits": "Penghargaan dan sumber",
+
+  "credits.title": "Penghargaan",
+  "credits.placeholder": "Penutur dan sumber di sebalik setiap kursus akan disenaraikan di sini.",
+
+  "notFound.title": "Halaman tidak dijumpai",
+  "notFound.body": "Kami tidak dapat mencari halaman itu.",
+  "notFound.home": "Pergi ke laluan pembelajaran",
+
+  "error.title": "Ada masalah",
+  "error.body": "Cuba muat semula halaman. Kemajuan anda disimpan dalam peranti ini.",
+
+  "level.new": "Baharu",
+  "level.learning": "Sedang belajar",
+  "level.known": "Diketahui",
+  "level.longterm": "Jangka panjang",
+  "beads.summary": "{new} baharu, {learning} sedang belajar, {known} diketahui, {longterm} jangka panjang"
+}

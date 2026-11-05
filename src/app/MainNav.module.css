@@ -1,0 +1,97 @@
+/* Phones: a bar fixed to the bottom, within thumb reach. */
+.nav {
+  position: fixed;
+  inset: auto 0 0 0;
+  z-index: 10;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-height: var(--nav-height);
+  padding: var(--space-1) var(--space-1);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: var(--leading-tight);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-text);
+}
+
+/* The current page is bold, coloured and has a bar, so it never relies on colour alone. */
+.link[aria-current='page'] {
+  color: var(--color-primary);
+  font-weight: var(--weight-bold);
+}
+
+.link[aria-current='page']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  background: var(--color-primary);
+}
+
+.link:focus-visible {
+  outline-offset: -3px;
+}
+
+/* Desktop: the same links sit inline in the top bar. */
+@media (min-width: 48rem) {
+  .nav {
+    position: static;
+    background: none;
+    border: 0;
+    padding: 0;
+  }
+
+  .list {
+    display: flex;
+    gap: var(--space-1);
+  }
+
+  .link {
+    flex-direction: row;
+    gap: var(--space-2);
+    min-height: var(--tap-min);
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-pill);
+    font-size: var(--text-base);
+  }
+
+  .link:hover {
+    background: var(--color-primary-soft);
+  }
+
+  .link[aria-current='page'] {
+    background: var(--color-primary-soft);
+  }
+
+  .link[aria-current='page']::before {
+    top: auto;
+    bottom: 2px;
+    left: var(--space-4);
+    right: var(--space-4);
+    border-radius: 3px;
+  }
+}

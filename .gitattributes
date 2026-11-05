@@ -1,0 +1,10 @@
+* text=auto eol=lf
+
+# Binary assets: never touch line endings
+*.woff2 binary
+*.png binary
+*.jpg binary
+*.m4a binary
+*.mp3 binary
+*.ogg binary
+*.webm binary

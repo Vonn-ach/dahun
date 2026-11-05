@@ -1,0 +1,36 @@
+.beads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.bead {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--bead-ring);
+  background: transparent;
+}
+
+/* New: an empty ring. */
+.new {
+  border-color: var(--bead-ring);
+}
+
+/* Learning: half filled from the bottom. */
+.learning {
+  border-color: var(--bead-learning-edge);
+  background: linear-gradient(to top, var(--bead-learning-fill) 50%, transparent 50%);
+}
+
+/* Known: solid. */
+.known {
+  border-color: var(--bead-known);
+  background: var(--bead-known);
+}
+
+/* Long-term: solid with a bright core, like a finished bead. */
+.longterm {
+  border-color: var(--bead-known);
+  background: radial-gradient(circle, var(--bead-dot) 0 32%, var(--bead-known) 34%);
+}

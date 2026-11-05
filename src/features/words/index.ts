@@ -1,0 +1,1 @@
+export { WordsScreen } from './WordsScreen';

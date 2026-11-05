@@ -1,0 +1,51 @@
+{
+  "app.name": "Dahun",
+  "app.tagline": "Learn the languages of Borneo",
+  "app.documentTitle": "{page} · {app}",
+  "app.skipToContent": "Skip to main content",
+
+  "nav.label": "Main",
+  "nav.home": "Dahun, learning path",
+  "nav.learn": "Learn",
+  "nav.practice": "Practice",
+  "nav.words": "Words",
+  "nav.progress": "Progress",
+  "nav.settings": "Settings",
+
+  "path.title": "Learning path",
+  "path.placeholder": "Your units and lessons will appear here.",
+  "path.sampleLesson": "Open a sample lesson",
+
+  "lesson.title": "Lesson",
+  "lesson.placeholder": "This lesson isn't ready yet.",
+  "lesson.backToPath": "Back to the learning path",
+
+  "practice.title": "Practice",
+  "practice.placeholder": "Short review rounds will appear here.",
+
+  "words.title": "Words",
+  "words.placeholder": "The words you've met will be listed here.",
+
+  "progress.title": "Progress",
+  "progress.placeholder": "Your practice days and beads will appear here.",
+
+  "settings.title": "Settings",
+  "settings.placeholder": "Language, theme and calm mode settings will appear here.",
+  "settings.credits": "Credits and sources",
+
+  "credits.title": "Credits",
+  "credits.placeholder": "The speakers and sources behind each course will be listed here.",
+
+  "notFound.title": "Page not found",
+  "notFound.body": "We couldn't find that page.",
+  "notFound.home": "Go to the learning path",
+
+  "error.title": "Something went wrong",
+  "error.body": "Try reloading the page. Your progress is saved on this device.",
+
+  "level.new": "New",
+  "level.learning": "Learning",
+  "level.known": "Known",
+  "level.longterm": "Long-term",
+  "beads.summary": "{new} new, {learning} learning, {known} known, {longterm} long-term"
+}

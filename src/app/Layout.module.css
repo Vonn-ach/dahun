@@ -1,0 +1,121 @@
+.shell {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.skipLink {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 20;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--color-primary-fill);
+  color: var(--color-on-primary-fill);
+  font-weight: var(--weight-bold);
+  transform: translateY(-200%);
+}
+
+.skipLink:focus {
+  transform: none;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.headerInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: var(--space-1) var(--space-4);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-min);
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.settings {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: var(--tap-min);
+  min-width: var(--tap-min);
+  padding: var(--space-2);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.settings:hover {
+  color: var(--color-text);
+  background: var(--color-primary-soft);
+}
+
+.settings[aria-current='page'] {
+  color: var(--color-primary);
+  background: var(--color-primary-soft);
+  font-weight: var(--weight-bold);
+}
+
+/* Phones show only the icon; the label stays for screen readers. */
+.settingsLabel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  /* Leave room for the fixed bottom navigation. */
+  padding: var(--space-5) var(--space-4) calc(var(--nav-height) + var(--space-6));
+}
+
+.main:focus {
+  outline: none;
+}
+
+@media (min-width: 48rem) {
+  .headerInner {
+    padding: var(--space-2) var(--space-5);
+  }
+
+  .settings {
+    padding-inline: var(--space-3);
+  }
+
+  .settingsLabel {
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip-path: none;
+  }
+
+  .main {
+    padding: var(--space-6) var(--space-5) var(--space-7);
+  }
+}

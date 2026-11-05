@@ -1,0 +1,172 @@
+/*
+ * Design tokens. Components use only the semantic tokens (--color-*, --space-*, …),
+ * never raw hex values, so a theme is just a different set of values.
+ *
+ * Brand palette: river teal, beadwork yellow, red and ink on mist.
+ * Text pairs meet WCAG AA (4.5:1) and UI edges meet 3:1 in both themes;
+ * src/styles/tokens.test.ts checks this, so run the tests after changing a colour.
+ * Beadwork yellow is too light to be text on mist, so it is used only as a fill.
+ */
+
+:root {
+  color-scheme: light;
+
+  /* Brand */
+  --brand-teal: #0c6a5e;
+  --brand-yellow: #d99e06;
+  --brand-red: #b8372a;
+  --brand-ink: #14201c;
+  --brand-mist: #eaf0ec;
+
+  /* Surfaces and text */
+  --color-bg: #eaf0ec;
+  --color-surface: #f8fbf9;
+  --color-text: #14201c;
+  --color-text-muted: #44544e;
+  --color-border: #c9d6cf;
+  --color-border-strong: #6b7d76;
+
+  /* Primary (river teal). --color-primary is for text and icons, -fill for buttons. */
+  --color-primary: #0c6a5e;
+  --color-primary-fill: #0c6a5e;
+  --color-primary-fill-hover: #0a5a50;
+  --color-on-primary-fill: #ffffff;
+  --color-primary-soft: #d3e6e0;
+
+  /* Accent (beadwork yellow) */
+  --color-accent: #d99e06;
+  --color-on-accent: #14201c;
+  --color-accent-soft: #f7e7bc;
+  --color-accent-text: #7a5400;
+
+  /* Danger (red). Always paired with an icon or text, never colour alone. */
+  --color-danger: #b8372a;
+  --color-danger-fill: #b8372a;
+  --color-on-danger-fill: #ffffff;
+  --color-danger-soft: #f5dad6;
+
+  --color-focus: #0c6a5e;
+
+  /* Beads (ProgressBeads). Each level also has its own shape. */
+  --bead-ring: #6b7d76;
+  --bead-learning-edge: #8a5f00;
+  --bead-learning-fill: #d99e06;
+  --bead-known: #0c6a5e;
+  --bead-dot: #f5c451;
+
+  --shadow-card: 0 1px 2px rgb(20 32 28 / 0.08), 0 2px 8px rgb(20 32 28 / 0.06);
+
+  /* Spacing (4px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* Type */
+  --font-body: 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque Variable', 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.75rem, 1.5rem + 1vw, 2.25rem);
+  --text-3xl: clamp(2.25rem, 1.9rem + 1.5vw, 3rem);
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --weight-regular: 400;
+  --weight-bold: 700;
+
+  /* Layout */
+  --tap-min: 44px;
+  --nav-height: 4rem;
+  --content-max: 42rem;
+
+  /* Motion (switched off for reduced motion below) */
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/*
+ * Dark theme. Plain CSS can't share one block between a media query and an
+ * attribute selector, so the two blocks below are copies.
+ * tokens.test.ts fails if they drift apart.
+ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --color-bg: #0e1714;
+    --color-surface: #15211d;
+    --color-text: #e6efea;
+    --color-text-muted: #a9bab2;
+    --color-border: #2c3d37;
+    --color-border-strong: #6f857c;
+    --color-primary: #5cc8b5;
+    --color-primary-fill: #0e7a6c;
+    --color-primary-fill-hover: #0f8072;
+    --color-on-primary-fill: #ffffff;
+    --color-primary-soft: #16352f;
+    --color-accent: #e5a50f;
+    --color-on-accent: #0e1714;
+    --color-accent-soft: #3a2e0e;
+    --color-accent-text: #f0b429;
+    --color-danger: #f08a7c;
+    --color-danger-fill: #b8372a;
+    --color-on-danger-fill: #ffffff;
+    --color-danger-soft: #3a1916;
+    --color-focus: #f0b429;
+    --bead-ring: #6f857c;
+    --bead-learning-edge: #f0b429;
+    --bead-learning-fill: #d99e06;
+    --bead-known: #0e7a6c;
+    --bead-dot: #f8d06a;
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-bg: #0e1714;
+  --color-surface: #15211d;
+  --color-text: #e6efea;
+  --color-text-muted: #a9bab2;
+  --color-border: #2c3d37;
+  --color-border-strong: #6f857c;
+  --color-primary: #5cc8b5;
+  --color-primary-fill: #0e7a6c;
+  --color-primary-fill-hover: #0f8072;
+  --color-on-primary-fill: #ffffff;
+  --color-primary-soft: #16352f;
+  --color-accent: #e5a50f;
+  --color-on-accent: #0e1714;
+  --color-accent-soft: #3a2e0e;
+  --color-accent-text: #f0b429;
+  --color-danger: #f08a7c;
+  --color-danger-fill: #b8372a;
+  --color-on-danger-fill: #ffffff;
+  --color-danger-soft: #3a1916;
+  --color-focus: #f0b429;
+  --bead-ring: #6f857c;
+  --bead-learning-edge: #f0b429;
+  --bead-learning-fill: #d99e06;
+  --bead-known: #0e7a6c;
+  --bead-dot: #f8d06a;
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.4), 0 2px 8px rgb(0 0 0 / 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+  }
+}

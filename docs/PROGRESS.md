@@ -4,26 +4,38 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 ## Now
 
-- Phase: 0 (set up)
-- Current prompt: 00 (kickoff) is done. Decisions D007–D014 are in `docs/DECISIONS.md`.
-- Repo: https://github.com/Vonn-ach/dahun (public). `main` is pushed and tracks `origin/main`. Commits use the GitHub noreply address.
+- Phase: 1 (MVP build)
+- Current prompt: 01 (scaffold) is done. The app runs with placeholder screens for every route. Lint, typecheck, unit tests (46), e2e (Pixel 360×800 + Desktop) and the build all pass locally.
+- Repo: https://github.com/Vonn-ach/dahun (public). The scaffold commit is local only, not pushed yet, so CI has not run on GitHub.
 
 ## Next up
 
-1. **Prompt 01 (scaffold).** Node.js v26.13.0 (LTS) and npm 11.20.0 are installed in `C:\Program Files\nodejs\` and on the PATH. In prompt 01, also:
-   - pin `.nvmrc` to `26` (the installed LTS)
-   - rename `src/features/review/` to `src/features/practice/` and add `words/` and `credits/` (D014)
-   - update `CLAUDE.md`: the folder layout (D014) and the wording of golden rule 4 (D007)
-   - add `.prettierignore` and `.gitattributes` (D014)
-2. Book the first speaker verification session (`speaker-kit/SESSION_GUIDE.md`) and take the speaker questions below.
+1. **Push and watch CI** (about 5 minutes): `git push`, then check the Actions tab on GitHub turns green. CI is `.github/workflows/ci.yml`.
+2. **Prompt 02 (content pipeline).** It replaces the `validate:content` and `build:draft` stubs, and brings in Ajv. Also update the status rules in `docs/CONTENT_MODEL.md` (D008) and apply the schema changes in D013.
+3. Book the first speaker verification session (`speaker-kit/SESSION_GUIDE.md`) and take the speaker questions below.
+
+## Notes from prompt 01 (scaffold)
+
+- **Versions:** React 19.3, Vite 8.3, React Router 8.5, Vitest 5.1, Playwright 1.64. Two pins:
+  - **TypeScript 6.0.3, not 7.0.** typescript-eslint supports TypeScript below 6.1 only. Move to 7 when it does.
+  - **ESLint 9.39, not 10.** eslint-plugin-jsx-a11y (last release 2024) doesn't list ESLint 10 support. npm marks ESLint 9 as no longer supported. It's a dev tool only, so nothing ships to learners, but revisit when jsx-a11y updates.
+- **npm audit:** 7 moderate warnings, all in dev tooling (minimatch inside typescript-eslint). None of it ships in the app.
+- **Not installed yet:** Zustand, Dexie and vite-plugin-pwa. Each gets added by the prompt that first uses it (02/05/07).
+- **Lint guards:** literal text inside JSX is an error (use `useT()`), and so is the string `'kys'` in `src/` (golden rule 5).
+- **Tokens:** `src/styles/tokens.test.ts` fails if a colour pair drops below WCAG AA, or if the two copies of the dark theme drift apart.
+- **e2e** runs against the Vite dev server so it needs no build first. Prompt 07 (offline) should switch it to `vite preview` of a real build.
+- **Placeholder:** the path screen links to `/lesson/example` until real lesson ids exist (prompt 02).
+- **Line endings:** `.gitattributes` sets LF. The repo was already LF, so no file content changed. Your Windows working copy switches from CRLF to LF as files are touched.
 
 ## Blockers / questions for the owner
+
+- **Malay UI strings:** `src/i18n/ms.json` was written by Claude. Please read it through, or ask a fluent Malay speaker to (UI text only, no Kayan).
 
 - **Before prompt 05:** a real backup file from the old trainer, or the meaning and time units of `b, d, c, w, s, u` (D010).
 - **Southwell copyright check:** sentence `kys-s005` is sourced only to `southwell-1980` and is not marked as constructed. The notes on `kys-0011`, `kys-0044` and `kys-0132` read like dictionary examples. If they were copied, take them out of the course until a speaker gives a sentence (ETHICS §3).
 - **Spelling conversions:** write the full table of how the seed's spellings were converted (ABVD symbols, and `blog-baram`'s `-k` to `'`) in `content/SOURCES.md`. The ABVD note gives only ʔ → `'`.
 - **"Report a problem" fallback (before prompt 09):** most learners and elders won't have a GitHub account. Choose an email address or another simple channel.
-- **Docs to bring in line with the decisions** when the related prompt runs: golden rule 4 in `CLAUDE.md` (D007), the status rules in `docs/CONTENT_MODEL.md` (D008), and the type-word rule and lesson length in `docs/PEDAGOGY.md` (D011).
+- **Docs to bring in line with the decisions** when the related prompt runs: the status rules in `docs/CONTENT_MODEL.md` (D008, prompt 02), and the type-word rule and lesson length in `docs/PEDAGOGY.md` (D011, prompt 03). Golden rule 4 in `CLAUDE.md` (D007) is done.
 
 ## Questions for speakers (session 1)
 
@@ -52,6 +64,7 @@ Only speakers can answer these. Claude must not guess. Corrections go into `cont
 ## Session log
 
 <!-- newest first: date · prompt · what changed · commit -->
+- 2026-11-05 · 01 scaffold · Vite + React + TS app with all 7 routes and placeholder screens, responsive nav (bottom bar on phones, top bar on desktop), design tokens (light/dark + `data-theme`), self-hosted fonts, UI kit (Button, Card, Chip, Badge, ProgressBeads), i18n (en/ms + `useT()`), ESLint/Prettier/Vitest/Playwright, CI workflow; CLAUDE.md layout (D014) and golden rule 4 (D007) updated · "chore: scaffold app, tooling, CI"
 - 2026-11-05 · setup · Pushed to github.com/Vonn-ach/dahun. The first three commits were re-signed with the GitHub noreply address before the first push, so their hashes changed.
 - 2026-11-05 · setup · Node.js 26.13.0 LTS installed with winget. fnm (Fast Node Manager) was already installed but held no Node versions; it is still there and doesn't interfere.
 - 2026-11-05 · 00 kickoff · Read all docs, schemas and the Kayan seed; reported 31 issues; recorded decisions D007–D014 and the speaker questions; initialised the git repo · fb89b6b

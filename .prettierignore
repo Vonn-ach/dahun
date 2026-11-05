@@ -1,0 +1,18 @@
+# Content and docs are reviewed by eye, often by people who don't code.
+# Reformatting them would bury real changes in noise (D014).
+content/
+schemas/
+docs/
+prompts/
+speaker-kit/
+.claude/
+*.md
+
+# Generated or installed
+node_modules/
+dist/
+coverage/
+playwright-report/
+test-results/
+src/generated/
+package-lock.json
