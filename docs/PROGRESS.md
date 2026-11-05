@@ -10,7 +10,8 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 ## Next up
 
-1. **Prompt 01 (scaffold).** First install Node.js LTS from nodejs.org, then open a new terminal and check `node -v` (about 15 minutes). In prompt 01, also:
+1. **Prompt 01 (scaffold).** Node.js v26.13.0 (LTS) and npm 11.20.0 are installed in `C:\Program Files\nodejs\`. Restart the Claude app before starting, so its terminals pick up the new PATH. In prompt 01, also:
+   - pin `.nvmrc` to `26` (the installed LTS)
    - rename `src/features/review/` to `src/features/practice/` and add `words/` and `credits/` (D014)
    - update `CLAUDE.md`: the folder layout (D014) and the wording of golden rule 4 (D007)
    - add `.prettierignore` and `.gitattributes` (D014)
@@ -19,7 +20,6 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 ## Blockers / questions for the owner
 
-- **Node.js is not installed on this PC.** This blocks prompt 01.
 - **Before prompt 05:** a real backup file from the old trainer, or the meaning and time units of `b, d, c, w, s, u` (D010).
 - **Southwell copyright check:** sentence `kys-s005` is sourced only to `southwell-1980` and is not marked as constructed. The notes on `kys-0011`, `kys-0044` and `kys-0132` read like dictionary examples. If they were copied, take them out of the course until a speaker gives a sentence (ETHICS §3).
 - **Spelling conversions:** write the full table of how the seed's spellings were converted (ABVD symbols, and `blog-baram`'s `-k` to `'`) in `content/SOURCES.md`. The ABVD note gives only ʔ → `'`.
@@ -53,5 +53,6 @@ Only speakers can answer these. Claude must not guess. Corrections go into `cont
 ## Session log
 
 <!-- newest first: date · prompt · what changed · commit -->
+- 2026-11-05 · setup · Node.js 26.13.0 LTS installed with winget. fnm (Fast Node Manager) was already installed but held no Node versions; it is still there and doesn't interfere.
 - 2026-11-05 · 00 kickoff · Read all docs, schemas and the Kayan seed; reported 31 issues; recorded decisions D007–D014 and the speaker questions; initialised the git repo · commit "docs: kickoff decisions"
 - 2026-11-05 · kit · Starter kit added (docs, prompts, schemas, Kayan seed, speaker kit) · e7e6ca2
