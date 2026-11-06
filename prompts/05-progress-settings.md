@@ -15,9 +15,9 @@ BUILD:
    - All settings apply immediately and persist.
 4. Backup & restore (src/features/progress/backup.ts):
    - Export: download dahun-backup-YYYY-MM-DD.json containing {app:"dahun", v:1, exportedAt, courses:{[iso]:{items, days, xp}}, settings}.
-   - Import: from a file or pasted text. **Also accept the legacy trainer format** {app:"dahun-kayan", v:1, state:{items:{"<unitId>:<slug>":{b,d,c,w,s,u}}, days, xp, settings}}, mapping legacy ids to entry ids through content/languages/kys/legacy-id-map.json. Merge per item, keeping the record with the newer `u`/updatedAt. Days are merged with max, XP with max.
+   - Import: from a file or pasted text. Merge per item, keeping the record with the newer updatedAt. Days are merged with max, XP with max. (The old Kayan trainer's backup format is no longer imported: D016.)
    - Copy-to-clipboard fallback for the export.
-   - Tests: round trip, merge rules, legacy import (fixture from the map).
+   - Tests: round trip and merge rules.
 5. Reset progress with a two-step confirm inside the page (no window.confirm).
 6. /credits: speakers (from language.json credits, honouring credit preferences), sources from lexicon.sources with links, and licences.
 
@@ -25,7 +25,7 @@ CONSTRAINTS:
 - No streak counter that resets, and no guilt copy ("You lost your streak!"). See D006.
 
 ACCEPTANCE:
-- Export → reset → import restores everything. Importing a legacy trainer backup maps all 210 seed ids.
+- Export → reset → import restores everything.
 - Settings persist across reloads, and calm mode removes every animation (verify with prefers-reduced-motion off).
 
 FINISH: Update docs/PROGRESS.md and commit ("feat: progress, settings, backup").

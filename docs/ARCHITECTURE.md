@@ -40,7 +40,7 @@
 | `engine/answers.ts` | Normalises answers using `language.json → orthography.normalization`. Returns `exact` / `close` (e.g. a missing glottal stop) / `wrong`. | Never changes content. It only compares. |
 | `engine/scheduler.ts` | Leitner boxes (1, 2, 4, 8, 16, 32 days) for Phase 1. Keep the interface swappable for FSRS later. | `now` is passed in. |
 | `storage/db.ts` | Dexie schema: `progress(itemId, box, due, seen, right, wrong, updatedAt)`, `days(date, answers)`, `settings`, `meta`. | Versioned migrations from day one. |
-| `features/progress/backup.ts` | Export and import progress as JSON. Import merges per item, keeping the newer copy. | Format must be compatible with the existing trainer's backup (`app: "dahun-kayan"`). |
+| `features/progress/backup.ts` | Export and import progress as JSON. Import merges per item, keeping the newer copy. | Dahun's own format only. The old Kayan trainer's backup import was dropped with the Kayan pack (D016). |
 
 ### Data flow for one answer
 

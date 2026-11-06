@@ -13,13 +13,13 @@
 
 ## Takes
 
-- One file per batch is fine. Say the **entry id** before each word ("kys zero-zero-five-eight"), then the speaker says the word **twice**, naturally, with a pause of about 1 second.
+- One file per batch is fine. Say the **entry id** before each word ("xkl zero-zero-five-eight"), then the speaker says the word **twice**, naturally, with a pause of about 1 second.
 - For phrases, ask for a natural, everyday speed, not slow syllables.
 - If they want to correct something, just do another take. The processing script keeps the last one.
 
 ## Files
 
 - Name each batch `YYYY-MM-DD_SPK01_unit1.m4a` (or .wav).
-- Copy it to the laptop into `audio-raw/kys/`. This folder is **git-ignored**: raw audio never goes to GitHub.
+- Copy it to the laptop into `audio-raw/xkl/`. This folder is **git-ignored**: raw audio never goes to GitHub.
 - Back up the raw files somewhere private (an external drive or a private cloud folder).
 - Trimming, naming per entry, loudness and conversion are done by `scripts/audio/process.ts` (prompt 06).

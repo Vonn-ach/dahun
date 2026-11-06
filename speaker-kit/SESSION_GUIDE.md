@@ -13,22 +13,22 @@
 
 ## During
 
-1. **Explain** the project in a minute: a free app for young Kayan to learn the language. Their words are checked by speakers like them, and they choose how they are credited.
+1. **Explain** the project in a minute: a free app for young Kenyah to learn the language, starting with Badeng. Their words are checked by speakers like them, and they choose how they are credited.
 2. **Consent**: go through the form together. If they'd rather not sign, record verbal consent at the start of the audio ("Saya setuju…").
-3. **Ask about their Kayan**: which village or river, Baram or Belaga, and who they learned from. Write it in `speaker_dialect_or_village`.
-4. **Go through the entries.** For each one, read the Malay meaning first and ask: *"Macam mana sebut '…' dalam bahasa Kayan?"* Let them say it **before** you show the written draft. Then show the draft and ask whether it is right or how they would write it.
+3. **Ask about their Kenyah**: which variety (Badeng, Lepo' Tau, Lepo' Ke' or another), which village or river, and who they learned from. Write it in `speaker_dialect_or_village`. If their variety isn't Badeng, a different word is a **variant for their variety**, not a correction of the Badeng form.
+4. **Go through the entries.** For each one, read the Malay meaning first and ask: *"Macam mana sebut '…' dalam bahasa Kenyah?"* Let them say it **before** you show the written draft. Then show the draft and ask whether it is right or how they would write it.
    - Correct → `correct_Y_N_unsure` = Y
    - Different → N, and write their form in `corrected_form` exactly as they spell it (or as they agree you should spell it)
    - Not sure / not used in their area → unsure, plus a note
    - Any extra word or usage they mention → `usage_note`
-5. **Record** each confirmed form: say the entry id aloud first ("kys-zero-zero-five-eight"), then they say the word twice with a short pause. Mark `audio_recorded_Y_N` = Y.
+5. **Record** each confirmed form: say the entry id aloud first ("xkl-zero-zero-five-eight"), then they say the word twice with a short pause. Mark `audio_recorded_Y_N` = Y.
 6. **Ask what shouldn't be in the app**: are any of these words or topics private, sacred or rude in some contexts?
 7. **Take breaks** every 20 minutes. Stop when they're tired. Fifteen good entries beat fifty rushed ones.
 
 ## After
 
 - [ ] Fill in `speaker_code` and `date` for every row you covered.
-- [ ] Copy the audio off your phone into `audio-raw/kys/` (this folder is git-ignored). Then run the audio prompt (06) or `scripts/audio/process.ts`.
+- [ ] Copy the audio off your phone into `audio-raw/xkl/` (this folder is git-ignored). Then run the audio prompt (06) or `scripts/audio/process.ts`.
 - [ ] In Claude Code, paste `prompts/templates/content-batch.md` with your CSV path. Corrections become **proposals** for you to approve; they never overwrite anything automatically.
 - [ ] Log the session in `docs/PROGRESS.md` (content status table).
 - [ ] Send the speaker a thank-you. Tell them what you'll do with the recordings, and show them the app when their words appear.

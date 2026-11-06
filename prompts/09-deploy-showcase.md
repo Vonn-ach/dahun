@@ -12,7 +12,7 @@ BUILD:
    Document the one-time setup steps I need to do by hand (accounts, tokens and repo secrets) in docs/DEPLOY.md, step by step.
 2. Security headers via _headers (CSP allowing only self + data: for fonts/images, no third-party scripts), and a 404 → SPA fallback.
 3. README: update the status line, demo links, 3 screenshots (generate them with Playwright at 360×800 into docs/screenshots/), a short GIF or a sequence of screenshots of a lesson, a "How it's built" section, and a "Help with content" call to action.
-4. docs/SHOWCASE.md: a 150-word project description for the Rakyat Builders Hub in English and Bahasa Malaysia, 5 bullet highlights, the tech stack, what is AI-assisted and how (Claude Code for development; no AI-generated Kayan), and current metrics from PROGRESS.md.
+4. docs/SHOWCASE.md: a 150-word project description for the Rakyat Builders Hub in English and Bahasa Malaysia, 5 bullet highlights, the tech stack, what is AI-assisted and how (Claude Code for development; no AI-generated Kenyah), and current metrics from PROGRESS.md.
 5. Feedback: a "Report a problem" link on every entry and summary screen that opens a prefilled GitHub issue (entry id, form, screen) using the issue template .github/ISSUE_TEMPLATE/content-problem.yml. Also add a bug template.
 6. Run /ship-check, and fix anything it flags.
 

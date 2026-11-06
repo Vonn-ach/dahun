@@ -1,6 +1,6 @@
 # Prompt 12: AI content assistant (Phase 3, optional)
 
-This is the "AI solution" part for showcasing. It makes speakers and the owner faster without ever putting AI-written Kayan in front of learners.
+This is the "AI solution" part for showcasing. It makes speakers and the owner faster without ever putting AI-written Kenyah in front of learners.
 
 ```
 READ FIRST: CLAUDE.md (golden rules 1, 2 and 4), docs/ETHICS_AND_DATA.md §5 (rules for AI), docs/ARCHITECTURE.md (Phase 3), docs/PROGRESS.md.

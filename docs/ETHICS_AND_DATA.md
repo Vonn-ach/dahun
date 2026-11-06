@@ -8,14 +8,14 @@ This is a language that belongs to a living community. The app is only as trustw
 
 Follow the **CARE Principles for Indigenous Data Governance** (Global Indigenous Data Alliance):
 
-- **Collective benefit**: the app should serve Kayan people first (free to learn, offline, heritage learners as the main audience).
+- **Collective benefit**: the app should serve Kenyah people first (free to learn, offline, heritage learners as the main audience).
 - **Authority to control**: speakers and the community decide what is taught, how it is spelled, and what stays private.
 - **Responsibility**: be open about sources, errors and how content is used. Credit people.
-- **Ethics**: avoid harm. Some cultural knowledge (ritual, *adet*, sacred songs, *tekna'*) may not be appropriate for a public app. **Ask before including it.**
+- **Ethics**: avoid harm. Some cultural knowledge (ritual, customary law, sacred songs and stories) may not be appropriate for a public app. **Ask before including it**, even when you know it yourself.
 
 In practice:
 
-- Before public launch, get written support from at least one community body: a longhouse headman (*Ketua Kaum*), a church or community association, or a Kayan cultural group. Keep a copy in a private folder, not in the public repo.
+- Before public launch, get written support from at least one community body: a longhouse headman (*Ketua Kaum*), a church or community association, or a Kenyah cultural group. Being a Kenyah speaker yourself doesn't replace this. Keep a copy in a private folder, not in the public repo.
 - Offer contributors a way to be credited by name, by initials, or anonymously, and honour it.
 - Budget something for speakers' time (a meal, a token payment, or credit in grant applications). Write down what was agreed.
 - Run a "Report a problem with this word" flow in the app, and correct reported errors quickly and publicly (`content/CHANGELOG.md`).
@@ -34,7 +34,7 @@ In practice:
 - **Language content and audio**: not open-licensed by default. See `content/LICENSE-CONTENT.md`. Decide the final licence *with* the community. Options include CC BY-NC-SA 4.0 or Traditional Knowledge labels from Local Contexts (localcontexts.org).
 - **Third-party sources** (`content/SOURCES.md`):
   - *ABVD* (Austronesian Basic Vocabulary Database): open-licensed with attribution. Confirm the exact licence on the ABVD site and keep its citation in the credits.
-  - *Southwell, Kayan–English Dictionary* (1980): still under copyright. Use it as a **reference to check** words, never to copy definitions, examples or large lists. Speaker-verified forms are the speakers' contribution.
+  - Dictionaries, word lists and church or school materials still under copyright: use them only as a **reference to check** words, never to copy definitions, examples or large lists. Speaker-verified forms are the speakers' contribution. (The earlier Kayan seed relied on Southwell's *Kayan–English Dictionary* this way; see the tag `kayan-seed-v1`.)
   - *Borneo Dictionary* (community website) and blogs: credit them, ask permission before relying on them heavily, and re-verify every entry with speakers.
 
 ## 4. Learner privacy (Malaysia PDPA 2010, as amended)
@@ -46,7 +46,7 @@ In practice:
 
 ## 5. Rules for AI (including Claude Code)
 
-- AI must **never generate indigenous-language text** that learners see as correct. Large language models know very little Kayan and will make up plausible but wrong forms.
+- AI must **never generate indigenous-language text** that learners see as correct. Large language models know very little Kenyah and will make up plausible but wrong forms. This applies even with a Kenyah-speaking owner: the owner gives the words, AI never suggests them.
 - AI **may** help with: code, UI copy in English and Malay, explanations that only re-use verified entries, choosing distractors from verified entries, formatting speaker input, and drafting questions for speakers.
 - AI-assisted content goes through the same review queue as human-entered content. Record `"assistedBy": "ai"` in the review entry.
 - Never send speakers' recordings or personal data to a third-party AI service without their explicit consent.

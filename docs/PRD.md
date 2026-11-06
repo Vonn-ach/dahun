@@ -6,24 +6,24 @@ Anyone with a phone can learn a Borneo indigenous language in five minutes a day
 
 ## Problem
 
-- Kayan and most other Borneo languages are passed on mainly by speaking at home. Many young Kayan, especially those in towns and in West Malaysia, understand little or none of the language.
-- There is no Duolingo course and no learning app for Kayan, and almost no recorded audio. The written sources (dictionaries, wordlists, blogs) use different spellings and dialects, and few learners can use them.
+- Kenyah and most other Borneo languages are passed on mainly by speaking at home. Many young Kenyah, especially those in towns and in West Malaysia, understand little or none of the language.
+- There is no Duolingo course and no learning app for Kenyah, and almost no recorded audio for learners. Kenyah is a family of varieties (Badeng, Lepo' Tau, Lepo' Ke' and others) with different words and spellings, and written materials are scattered.
 - The big apps do not cover small languages, and their gamification often punishes people who miss days.
 
 ## Users
 
 | Persona | Needs |
 |---|---|
-| **Heritage learner** (18–35, Kayan parents, grew up in a town) | Talk with grandparents, feel connected, not be embarrassed. Wants real pronunciation. |
-| **Sarawakian non-Kayan** (colleague, spouse, posted to Baram/Belaga) | Greetings, numbers, everyday phrases, cultural respect. |
+| **Heritage learner** (18–35, Kenyah parents, grew up in a town) | Talk with grandparents, feel connected, not be embarrassed. Wants real pronunciation. |
+| **Sarawakian non-Kenyah** (colleague, spouse, posted to a Kenyah area) | Greetings, numbers, everyday phrases, cultural respect. |
 | **Teacher / community organiser** | Point a class or youth group at structured content and see that it is accurate. |
 | **Speaker / contributor** (elder or fluent adult) | Check words, record audio, and be credited. Simple, phone-based, in Malay. |
 
 ## MVP scope (Phase 1)
 
-1. **One course: Kayan (Baram)**, with Belaga variants shown as notes. About 10 units and 40–60 lessons, built from the seed lexicon in `content/languages/kys/`.
+1. **One course: Kenyah (Badeng variety)**, in `content/languages/xkl/`. Other Kenyah varieties appear as labelled variants when their speakers add them. About 10 units and 40–60 lessons. The words come from Badeng speakers, starting with the owner, and none are written by AI (D016).
 2. **Learning path**: units → lessons. Lessons unlock in order, but any unit can be opened (no hard gating).
-3. **Lesson player** with these exercise types: intro card, pick the meaning, pick the word, match pairs, type the word (lenient on the glottal stop, with a spelling nudge), build the sentence, and listen-and-pick (only when audio exists).
+3. **Lesson player** with these exercise types: intro card, pick the meaning, pick the word, match pairs, type the word (lenient on small spelling slips the language pack lists, with a spelling nudge), build the sentence, and listen-and-pick (only when audio exists).
 4. **Spaced review**: a "Practice" button builds a 2/5/10-minute session from due items.
 5. **Progress**: XP, a weekly practice view (no fragile streak), per-unit bead progress, and backup/restore to a file.
 6. **Offline PWA**: installable on Android and desktop, and works with no signal after the first load.
@@ -47,8 +47,8 @@ Accounts, cloud sync, leaderboards, social features, speech recognition, AI chat
 | Risk | Mitigation |
 |---|---|
 | Content errors embarrass learners or the community | Two-speaker verification, status gating, an in-app "Report a problem" link, and a public changelog of corrections |
-| Dialect disagreement (Baram vs Belaga, village variation) | Store dialect per entry; let learners pick a dialect at onboarding; show variants instead of declaring one "correct" |
+| Dialect disagreement (Badeng vs other Kenyah varieties, village variation) | Start with one variety (Badeng); store dialect per entry; add other varieties as labelled variants from their own speakers; let learners pick a variety at onboarding; never declare one "correct" |
 | No audio | Speaker recording sessions are part of the roadmap; ship text-only lessons first |
-| Scope creep | Phase gates in `docs/ROADMAP.md`. A second language starts only after the Kayan gate is met |
+| Scope creep | Phase gates in `docs/ROADMAP.md`. A second language starts only after the Kenyah gate is met |
 | Builder burnout | 2-week milestones, prompts sized for one session each, `docs/PROGRESS.md` log |
 | Data or IP disputes | Consent forms, a content licence agreed with the community, and attribution for every source |

@@ -1,12 +1,13 @@
 # Speaker kit
 
-Everything you need to check content and record audio with Kayan speakers. These files are for people, not code.
+Everything you need to add and check content and record audio with Kenyah speakers. These files are for people, not code.
 
 | File | Use |
 |---|---|
 | `SESSION_GUIDE.md` | How to run a 60-minute verification and recording session |
 | `consent-form.md` | Bilingual (BM/EN) consent form. Print it or share it. Keep signed copies **private** |
-| `verification-sheet.csv` | Every entry and sentence (210 + 14 today), ready to tick off in Excel or Google Sheets. The `note_in_draft` column has the usage notes, some with Kayan words for the speaker to check. It is made from the content files by `npm run sheet`, so don't edit it by hand: save a copy for each session |
+| `new-words-template.csv` | Empty sheet (form, English, Malay, unit, kind, other spellings, note, where from) for writing down new Badeng words. Claude Code turns it into content files and never changes a word |
+| `verification-sheet.csv` | Every entry and sentence (none yet: the Kenyah course is new), ready to tick off in Excel or Google Sheets. The `note_in_draft` column has the usage notes, some with Kenyah words for the speaker to check. It is made from the content files by `npm run sheet`, so don't edit it by hand: save a copy for each session |
 | `RECORDING_CHECKLIST.md` | Getting clean audio with a phone |
 
 After a session, use `prompts/templates/content-batch.md` in Claude Code to turn the sheet into content updates.
@@ -26,4 +27,4 @@ The consent form is a draft, not legal advice. Section 4 (the personal data noti
    - **Are voice recordings "biometric data"** (sensitive personal data under the 2024 amendments) when they are used only as clips to play, never to identify anyone? Either way, the form asks for explicit consent.
    - **Is 21 days the right reply time** for requests to see or correct data?
    - **Storing data outside Malaysia:** a cloud service now, and Supabase in Singapore in Phase 3.
-3. **Ask a fluent Malay speaker to read the BM text.** It has no Kayan in it.
+3. **Ask a fluent Malay speaker to read the BM text.** It has no Kenyah in it.

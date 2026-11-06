@@ -10,7 +10,7 @@ Run these and collect results (continue even if one fails):
 4. `npm run test`
 5. `npm run e2e`
 6. `npm run build`, then report the total JS/CSS size and the largest chunks
-7. Search `src/` for: hard-coded UI strings outside i18n, `console.log`, `TODO` / `FIXME`, any language code used in logic (e.g. `'kys'`), `Date.now()` inside `src/engine/`
+7. Search `src/` for: hard-coded UI strings outside i18n, `console.log`, `TODO` / `FIXME`, any language code used in logic (e.g. `'xkl'`; the lint rule catches pack codes), `Date.now()` inside `src/engine/`
 8. Use the **content-guardian** subagent on `git diff main...HEAD` (or the uncommitted diff)
 
 Report as a table: check · pass/fail · notes. Then give a verdict:

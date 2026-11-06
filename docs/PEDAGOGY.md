@@ -17,12 +17,12 @@ Wrong answers are re-asked once, 2–3 steps later, in an easier format.
 |---|---|---|
 | `intro` | New entry | No grading |
 | `pick-meaning` | Box 0–2 | 4 options, distractors from the same unit first |
-| `pick-word` | Box 1+ | Glottal stops highlighted in options |
+| `pick-word` | Box 1+ | Characters in `orthography.highlight` (if the pack lists any) are highlighted in options |
 | `match-pairs` | 4+ seen entries in lesson | 4–5 pairs, tap to pair |
 | `type-word` | Box 3+ | Lenient matching (see CONTENT_MODEL), "Hint" reveals letters (half XP), "Show me" counts as wrong |
 | `build-sentence` | Lesson has sentences | Tap tokens into order; no distractor tokens at first, add 1–2 later |
 | `listen-pick` | Entry has audio | Play audio, pick the written form |
-| `malay-bridge` | `malayCognate: true`, box 1+ | Malay word → pick the Kayan cousin |
+| `malay-bridge` | `malayCognate: true`, box 1+ | Malay word → pick the Kenyah cousin |
 | `speak-compare` (Phase 2) | Entry has audio | Learner records themselves, then plays both back. Self-graded. No speech recognition |
 
 ## Spaced repetition
@@ -51,10 +51,11 @@ Wrong answers are re-asked once, 2–3 steps later, in an easier format.
 
 ## Dialects
 
-- Onboarding asks: "Which Kayan do you want to learn? Baram / Belaga / Not sure (Baram)".
-- Entries in the other dialect are still taught when the chosen dialect has no form, with a badge such as "Belaga form".
+- Onboarding asks which variety the learner wants, listing the pack's selectable dialects plus "Not sure" (which means the default). For Kenyah today that is Badeng only, so the question is skipped until a second variety has content.
+- Entries in another variety are still taught when the chosen one has no form, with a badge naming that variety.
+- Each variety's forms come from its own speakers. A form from one variety is never presented as a correction of another.
 - Variants are always accepted as typed answers.
 
 ## Praise and UI phrases in the language
 
-Use short phrases from content, referenced by entry id in `language.json → uiPhrases` (for Kayan, "Sayu!" = good). Never write language text directly in i18n files.
+Use short phrases from content, referenced by entry id in `language.json → uiPhrases` (for example a speaker-checked praise word for "good!"). Never write language text directly in i18n files.

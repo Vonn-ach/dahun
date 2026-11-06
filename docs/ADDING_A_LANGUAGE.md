@@ -16,7 +16,7 @@ A new language is a new folder plus people. If you need to change code to add on
    - `dialects`, `defaultDialect`
    - `orthography.normalization`: which characters are optional when matching typed answers (glottal stop, diacritics such as é)
    - `uiPhrases`: entry ids for praise ("good!") and greetings. Leave these empty until those entries are verified.
-4. Add entries to `lexicon.json` with `status: "draft"`, sources, and dialect. Use the same unit themes as Kayan, so the learning paths line up across languages.
+4. Add entries to `lexicon.json` with `status: "draft"`, sources, and dialect. Use the same unit themes as Kenyah (`content/languages/xkl/course.json`), so the learning paths line up across languages.
 5. Build `course.json` (`/new-lesson`) and add sentences.
 6. `npm run validate:content` until it is clean.
 7. Verification sessions → statuses move to `verified` → audio.

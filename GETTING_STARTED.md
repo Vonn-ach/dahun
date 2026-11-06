@@ -1,6 +1,6 @@
 # Getting started (for you, the human)
 
-Two tracks run side by side: **build** (you + Claude Code) and **content** (you + Kayan speakers). The app is only as good as the content track, so start both this week.
+Two tracks run side by side: **build** (you + Claude Code) and **content** (you + other Kenyah speakers, starting with your own Badeng). The app is only as good as the content track, so keep both moving.
 
 ## Step 1: Tools (about 1 hour, Windows)
 
@@ -15,10 +15,10 @@ Two tracks run side by side: **build** (you + Claude Code) and **content** (you 
 2. Clone it, copy everything from this kit into it, then:
    ```
    git add -A
-   git commit -m "Add Dahun starter kit: docs, prompts, schemas, Kayan seed, speaker kit"
+   git commit -m "Add Dahun starter kit: docs, prompts, schemas, speaker kit"
    git push
    ```
-3. In the repo settings, add a description ("Learn Kayan and other Borneo languages, 5 minutes a day") and the topics `language-learning`, `indigenous-languages`, `sarawak`, `kayan`, `pwa`.
+3. In the repo settings, add a description ("Learn Kenyah and other Borneo languages, 5 minutes a day") and the topics `language-learning`, `indigenous-languages`, `sarawak`, `kenyah`, `pwa`.
 
 ## Step 3: Rakyat Builders Hub (15 minutes)
 
@@ -38,9 +38,11 @@ Read `prompts/README.md` once. Then, per session:
 ## Step 5: Content track (start this week)
 
 1. Read `docs/ETHICS_AND_DATA.md` and `speaker-kit/SESSION_GUIDE.md`.
-2. Make a list of 3–5 possible speakers: relatives, church members, Kayan student or community groups in the Klang Valley, and contacts in Baram or Belaga. Aim for at least one elder and one fluent younger adult.
-3. Print or share `speaker-kit/consent-form.md` and open `speaker-kit/verification-sheet.csv` in Google Sheets or Excel.
-4. First session: 60 minutes, about 50 entries (Units 1–3). Record audio on your phone at the same time.
+2. Fill in your own consent form as speaker `SPK01` and keep it private. You are the first speaker of this course.
+3. Write your first 100–200 everyday Badeng words and short phrases in `speaker-kit/new-words-template.csv`, using the 11 unit themes (greetings, numbers, people, food, time, body, nature, describing, actions, questions, culture). Claude Code turns the sheet into content files. It never adds or changes a word.
+4. Make a list of 3–5 other Badeng speakers who could check your list: relatives, church members, Kenyah associations, people from your village or longhouse. Aim for at least one elder and one fluent younger adult. A word becomes "verified" only when a second speaker agrees.
+5. First session: 60 minutes, about 50 entries (Units 1–3), with `speaker-kit/consent-form.md` and the regenerated `speaker-kit/verification-sheet.csv`. Record audio on your phone at the same time.
+6. Speakers of other Kenyah varieties (Lepo' Tau, Lepo' Ke' and others) are welcome later: their forms are added as labelled variants next to Badeng, never as "corrections".
 
 ## Your first two weeks
 

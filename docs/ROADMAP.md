@@ -6,7 +6,7 @@ Every phase ends with a **gate**: concrete checks that must be true before start
 
 - [ ] Tools installed, repo created and public, kit committed (see `GETTING_STARTED.md`)
 - [ ] Rakyat Builders Hub profile done and repo linked
-- [ ] 2–3 Kayan speakers contacted. First verification session booked (`speaker-kit/`)
+- [ ] 2–3 Badeng Kenyah speakers (besides the owner) contacted. First verification session booked (`speaker-kit/`)
 - [ ] Prompt **00** run: Claude Code has read the docs and agreed the plan in `docs/PROGRESS.md`
 
 **Gate:** the plan is agreed and at least one speaker session is scheduled.
@@ -55,6 +55,6 @@ Every phase ends with a **gate**: concrete checks that must be true before start
 
 | Prompt | Delivers |
 |---|---|
-| 14 | Add a second language pack (e.g. Iban, Kenyah or Bidayuh) with a partner community |
+| 14 | Add a second language pack (e.g. Kayan from the `kayan-seed-v1` tag, Iban or Bidayuh) with a partner community. Another Kenyah variety is a dialect in the `xkl` pack, not a new pack |
 
-**Start only if:** Kayan has at least 500 verified entries, at least 50 weekly learners, and a partner from the new language community has agreed to lead its content. The code should need no changes. If it does, fix the abstraction first.
+**Start only if:** Kenyah has at least 500 verified entries, at least 50 weekly learners, and a partner from the new language community has agreed to lead its content. The code should need no changes. If it does, fix the abstraction first.

@@ -1,6 +1,6 @@
 # Borang Persetujuan Penutur / Speaker Consent Form
 
-**Projek / Project:** Dahun: aplikasi percuma untuk belajar bahasa Kayan / a free app for learning Kayan
+**Projek / Project:** Dahun: aplikasi percuma untuk belajar bahasa Kenyah / a free app for learning Kenyah
 **Penganjur / Organiser:** Pherry Asan Philip · [e-mel / email] · [telefon / phone]
 
 > Draf ini bukan nasihat undang-undang. Minta seseorang yang berpengetahuan menyemaknya sebelum digunakan secara meluas.
@@ -10,9 +10,9 @@
 
 ### 1. Apa yang saya minta / What I'm asking
 
-**BM:** Saya ingin anda (a) menyemak perkataan dan ayat bahasa Kayan, dan (b) merakam suara anda menyebutnya, untuk digunakan dalam aplikasi pembelajaran percuma "Dahun".
+**BM:** Saya ingin anda (a) menyemak perkataan dan ayat bahasa Kenyah, dan (b) merakam suara anda menyebutnya, untuk digunakan dalam aplikasi pembelajaran percuma "Dahun".
 
-**EN:** I'd like you to (a) check Kayan words and sentences, and (b) record your voice saying them, for use in the free learning app "Dahun".
+**EN:** I'd like you to (a) check Kenyah words and sentences, and (b) record your voice saying them, for use in the free learning app "Dahun".
 
 ### 2. Bagaimana ia digunakan / How it will be used
 
@@ -53,8 +53,8 @@ The organiser named above is responsible for your personal data in this project.
 
 **Siapa yang boleh melihatnya / Who can see it**
 
-- Orang ramai hanya melihat klip pendek yang anda setujui, perkataan yang anda semak, kod penutur anda, dialek anda (contohnya Baram), dan nama, inisial atau "Tanpa nama" mengikut pilihan anda. Kampung, nombor telefon, e-mel dan tandatangan anda tidak akan dipaparkan.
-  The public sees only the short clips you agreed to, the words you checked, your speaker code, your dialect (for example Baram), and your name, initials or "Anonymous" as you chose. Your village, phone number, email and signature are never shown.
+- Orang ramai hanya melihat klip pendek yang anda setujui, perkataan yang anda semak, kod penutur anda, dialek anda (contohnya Badeng), dan nama, inisial atau "Tanpa nama" mengikut pilihan anda. Kampung, nombor telefon, e-mel dan tandatangan anda tidak akan dipaparkan.
+  The public sees only the short clips you agreed to, the words you checked, your speaker code, your dialect (for example Badeng), and your name, initials or "Anonymous" as you chose. Your village, phone number, email and signature are never shown.
 - Borang ini dan rakaman penuh hanya dilihat oleh penganjur dan: _______________________. Ia tidak diberi kepada sesiapa lagi, kecuali jika dikehendaki oleh undang-undang.
   This form and the full recordings are seen only by the organiser and: _______________________. They are not given to anyone else, unless the law requires it.
 
