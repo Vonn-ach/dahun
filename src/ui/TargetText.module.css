@@ -1,0 +1,10 @@
+.text {
+  overflow-wrap: break-word;
+}
+
+/* The character itself is always shown, so colour is an extra cue, never the only one. */
+.highlight {
+  color: var(--color-primary);
+  font-weight: var(--weight-bold);
+  padding-inline: 0.05em;
+}

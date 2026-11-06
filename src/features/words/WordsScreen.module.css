@@ -1,0 +1,125 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.searchLabel {
+  font-weight: var(--weight-bold);
+}
+
+.search {
+  width: 100%;
+  min-height: var(--tap-min);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.search::placeholder {
+  color: var(--color-text-muted);
+  opacity: 1;
+}
+
+/*
+ * One scrolling row of unit chips on phones, so the list starts near the top.
+ * Each chip is a button, so Tab reaches them and focus scrolls them into view.
+ */
+.chips {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+  padding-block: var(--space-1);
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.chips > * {
+  flex: none;
+}
+
+.count {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-3);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: calc(-1 * var(--space-3)) 0;
+  padding: 0;
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-block: var(--space-3);
+}
+
+.row + .row {
+  border-top: 1px solid var(--color-border);
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.form {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-tight);
+}
+
+.badges {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.gloss {
+  font-size: var(--text-base);
+}
+
+.variants,
+.sources {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.label {
+  font-weight: var(--weight-bold);
+}
+
+.sourceList {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.source {
+  display: inline-block;
+  margin: 0 var(--space-1) var(--space-1) 0;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+@media (min-width: 48rem) {
+  .chips {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+}

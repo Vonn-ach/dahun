@@ -5,3 +5,4 @@ export { Badge, type BadgeTone } from './Badge';
 export { ProgressBeads } from './ProgressBeads';
 export { Screen } from './Screen';
 export { cx } from './cx';
+export { TargetText, splitHighlights, type TextPart } from './TargetText';

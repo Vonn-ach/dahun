@@ -3,14 +3,18 @@ import userEvent from '@testing-library/user-event';
 import { createMemoryRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
 import { describe, expect, it } from 'vitest';
+import { ContentProvider } from '../content';
 import { I18nProvider } from '../i18n';
+import { staticSource, testBundle } from '../test/content';
 import { routes } from './routes';
 
 function renderAt(path: string) {
   const router = createMemoryRouter(routes, { initialEntries: [path] });
   render(
     <I18nProvider initialLocale="en">
-      <RouterProvider router={router} />
+      <ContentProvider source={staticSource([testBundle])}>
+        <RouterProvider router={router} />
+      </ContentProvider>
     </I18nProvider>,
   );
   return router;

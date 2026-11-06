@@ -14,7 +14,19 @@
 
   "path.title": "Laluan pembelajaran",
   "path.placeholder": "Unit dan pelajaran anda akan dipaparkan di sini.",
-  "path.sampleLesson": "Buka contoh pelajaran",
+  "path.firstLesson": "Buka pelajaran pertama",
+
+  "content.loading": "Memuatkan kursus…",
+  "content.checking.title": "Sedang disemak oleh penutur",
+  "content.checking.body": "Setiap perkataan {language} disemak oleh dua penutur fasih sebelum dipaparkan dalam aplikasi. Pelajaran akan dipaparkan di sini sebaik sahaja siap.",
+  "content.checking.progress": "{verified} daripada {total} perkataan telah disemak setakat ini.",
+  "content.none.title": "Belum ada kursus",
+  "content.none.body": "Versi aplikasi ini belum mempunyai kursus bahasa.",
+
+  "preview.draft.title": "Pratonton",
+  "preview.draft.body": "Kebanyakan perkataan di sini belum disemak oleh penutur. Perkataan bertanda Draf mungkin salah.",
+  "preview.beta.title": "Beta",
+  "preview.beta.body": "Sesetengah perkataan di sini baru disemak oleh seorang penutur.",
 
   "lesson.title": "Pelajaran",
   "lesson.placeholder": "Pelajaran ini belum siap.",
@@ -24,7 +36,18 @@
   "practice.placeholder": "Pusingan ulang kaji yang pendek akan dipaparkan di sini.",
 
   "words.title": "Perkataan",
-  "words.placeholder": "Perkataan yang pernah anda temui akan disenaraikan di sini.",
+  "words.searchLabel": "Cari perkataan",
+  "words.searchHint": "{language}, Inggeris atau Melayu",
+  "words.unitFilter": "Tunjukkan perkataan daripada",
+  "words.allUnits": "Semua unit",
+  "words.count": "Menunjukkan {shown} daripada {total} perkataan",
+  "words.noMatches": "Tiada perkataan yang sepadan dengan carian anda.",
+  "words.listLabel": "Senarai perkataan",
+  "words.draft": "Draf",
+  "words.speakerChecked": "Disemak oleh seorang penutur",
+  "words.alsoLabel": "Juga:",
+  "words.dialectLabel": "{dialect}:",
+  "words.sourcesLabel": "Sumber:",
 
   "progress.title": "Kemajuan",
   "progress.placeholder": "Hari latihan dan manik anda akan dipaparkan di sini.",

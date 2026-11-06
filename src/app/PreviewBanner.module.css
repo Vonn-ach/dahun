@@ -1,0 +1,14 @@
+.banner {
+  padding: var(--space-2) var(--space-4);
+  background: var(--color-accent-soft);
+  border-bottom: 2px solid var(--color-accent-text);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}

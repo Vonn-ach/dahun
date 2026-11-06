@@ -119,3 +119,7 @@
     padding: var(--space-6) var(--space-5) var(--space-7);
   }
 }
+
+.loading {
+  color: var(--color-text-muted);
+}

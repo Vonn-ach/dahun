@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react';
+import { Suspense, useEffect, useRef } from 'react';
 import { Link, NavLink, Outlet, ScrollRestoration, useLocation } from 'react-router';
 import { useT } from '../i18n';
 import { SettingsIcon } from './icons';
 import { MainNav } from './MainNav';
+import { PreviewBanner } from './PreviewBanner';
 import styles from './Layout.module.css';
 
 export function Layout() {
@@ -25,6 +26,7 @@ export function Layout() {
       <a href="#main" className={styles.skipLink}>
         {t('app.skipToContent')}
       </a>
+      <PreviewBanner />
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link to="/" className={styles.brand} aria-label={t('nav.home')}>
@@ -38,7 +40,16 @@ export function Layout() {
         </div>
       </header>
       <main id="main" ref={mainRef} tabIndex={-1} className={styles.main}>
-        <Outlet />
+        {/* Screens suspend while the course bundle loads (one chunk per language). */}
+        <Suspense
+          fallback={
+            <p role="status" className={styles.loading}>
+              {t('content.loading')}
+            </p>
+          }
+        >
+          <Outlet />
+        </Suspense>
       </main>
       <ScrollRestoration />
     </div>

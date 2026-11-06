@@ -14,7 +14,19 @@
 
   "path.title": "Learning path",
   "path.placeholder": "Your units and lessons will appear here.",
-  "path.sampleLesson": "Open a sample lesson",
+  "path.firstLesson": "Open the first lesson",
+
+  "content.loading": "Loading the course…",
+  "content.checking.title": "Being checked by speakers",
+  "content.checking.body": "Every {language} word is checked by two fluent speakers before it appears in the app. Lessons will appear here as soon as they're ready.",
+  "content.checking.progress": "{verified} of {total} words checked so far.",
+  "content.none.title": "No course yet",
+  "content.none.body": "This version of the app doesn't include a language course yet.",
+
+  "preview.draft.title": "Preview",
+  "preview.draft.body": "Most words here haven't been checked by speakers yet. Words marked Draft may be wrong.",
+  "preview.beta.title": "Beta",
+  "preview.beta.body": "Some words here have been checked by only one speaker so far.",
 
   "lesson.title": "Lesson",
   "lesson.placeholder": "This lesson isn't ready yet.",
@@ -24,7 +36,18 @@
   "practice.placeholder": "Short review rounds will appear here.",
 
   "words.title": "Words",
-  "words.placeholder": "The words you've met will be listed here.",
+  "words.searchLabel": "Search words",
+  "words.searchHint": "{language}, English or Malay",
+  "words.unitFilter": "Show words from",
+  "words.allUnits": "All units",
+  "words.count": "Showing {shown} of {total} words",
+  "words.noMatches": "No words match your search.",
+  "words.listLabel": "Word list",
+  "words.draft": "Draft",
+  "words.speakerChecked": "Checked by one speaker",
+  "words.alsoLabel": "Also:",
+  "words.dialectLabel": "{dialect}:",
+  "words.sourcesLabel": "Sources:",
 
   "progress.title": "Progress",
   "progress.placeholder": "Your practice days and beads will appear here.",

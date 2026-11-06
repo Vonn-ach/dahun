@@ -36,8 +36,9 @@ test.describe('mobile navigation', () => {
     await nav.getByRole('link', { name: 'Learn' }).tap();
     await expectScreen(page, /\/$/, 'Learning path');
 
-    await page.getByRole('link', { name: 'Open a sample lesson' }).tap();
-    await expectScreen(page, /\/lesson\/example$/, 'Lesson');
+    // The dev server builds the draft bundle, so the first real lesson is there.
+    await page.getByRole('link', { name: 'Open the first lesson' }).tap();
+    await expectScreen(page, /\/lesson\/[a-z0-9-]+$/, 'Lesson');
   });
 
   test('fits a 360px screen without sideways scrolling', async ({ page }) => {
