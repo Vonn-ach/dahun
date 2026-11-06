@@ -2,7 +2,7 @@
   "name": "dahun",
   "private": true,
   "version": "0.0.0",
-  "description": "Learn the indigenous languages of Borneo, starting with Kayan.",
+  "description": "Learn the indigenous languages of Borneo, starting with Kenyah.",
   "type": "module",
   "license": "MIT",
   "engines": {
@@ -11,6 +11,7 @@
   "scripts": {
     "predev": "npm run content:draft",
     "dev": "vite",
+    "dev:e2e": "tsx scripts/build-content.ts --include-drafts --quiet --content tests/fixtures/packs/valid && vite --port 5174 --strictPort",
     "prebuild": "npm run content:release",
     "build": "vite build",
     "build:draft": "npm run content:draft && vite build --mode draft",

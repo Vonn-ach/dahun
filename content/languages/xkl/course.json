@@ -1,0 +1,94 @@
+{
+  "$schema": "../../../schemas/course.schema.json",
+  "language": "xkl",
+  "units": [
+    {
+      "id": "greetings",
+      "title": {
+        "en": "Greetings & courtesy",
+        "ms": "Salam & budi bahasa"
+      },
+      "lessons": []
+    },
+    {
+      "id": "numbers",
+      "title": {
+        "en": "Numbers",
+        "ms": "Nombor"
+      },
+      "lessons": []
+    },
+    {
+      "id": "people",
+      "title": {
+        "en": "People & pronouns",
+        "ms": "Orang & kata ganti nama"
+      },
+      "lessons": []
+    },
+    {
+      "id": "food",
+      "title": {
+        "en": "Food & drink",
+        "ms": "Makanan & minuman"
+      },
+      "lessons": []
+    },
+    {
+      "id": "time",
+      "title": {
+        "en": "Time & days",
+        "ms": "Masa & hari"
+      },
+      "lessons": []
+    },
+    {
+      "id": "body",
+      "title": {
+        "en": "Body",
+        "ms": "Anggota badan"
+      },
+      "lessons": []
+    },
+    {
+      "id": "nature",
+      "title": {
+        "en": "Nature & animals",
+        "ms": "Alam & haiwan"
+      },
+      "lessons": []
+    },
+    {
+      "id": "describing",
+      "title": {
+        "en": "Describing & colours",
+        "ms": "Sifat & warna"
+      },
+      "lessons": []
+    },
+    {
+      "id": "actions",
+      "title": {
+        "en": "Everyday actions",
+        "ms": "Perbuatan harian"
+      },
+      "lessons": []
+    },
+    {
+      "id": "questions",
+      "title": {
+        "en": "Questions & little words",
+        "ms": "Soalan & kata kecil"
+      },
+      "lessons": []
+    },
+    {
+      "id": "culture",
+      "title": {
+        "en": "Culture & places",
+        "ms": "Budaya & tempat"
+      },
+      "lessons": []
+    }
+  ]
+}

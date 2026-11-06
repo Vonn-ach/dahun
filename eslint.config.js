@@ -4,6 +4,16 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import prettier from 'eslint-config-prettier';
 import globals from 'globals';
+import { existsSync, readdirSync } from 'node:fs';
+
+// Golden rule 5: no code may branch on a specific language pack. Every folder
+// in content/languages/ is a pack code, so none of them may appear as a literal.
+const languagesDir = new URL('./content/languages/', import.meta.url);
+const packCodes = existsSync(languagesDir)
+  ? readdirSync(languagesDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory() && /^[a-z]{3}$/.test(d.name))
+      .map((d) => d.name)
+  : [];
 
 export default tseslint.config(
   {
@@ -50,12 +60,12 @@ export default tseslint.config(
     rules: {
       'no-restricted-syntax': [
         'error',
-        {
+        ...packCodes.map((code) => ({
           // Golden rule 5: the app never branches on a specific language pack.
-          selector: "Literal[value='kys']",
+          selector: `Literal[value='${code}']`,
           message:
             'Language-specific behaviour belongs in language.json, not in code (CLAUDE.md golden rule 5).',
-        },
+        })),
         {
           // UI text goes through useT() so it can be translated, and so no
           // indigenous-language text can slip into components by accident.

@@ -45,7 +45,7 @@ export function createSchemaValidators(schemasDir: string): SchemaValidators {
 }
 
 /**
- * "/entries/12/gloss" → "entries[kys-0013].gloss", so a message points at the
+ * "/entries/12/gloss" → "entries[tst-0013].gloss", so a message points at the
  * entry a person would search for rather than an array position.
  */
 export function describeLocation(data: unknown, instancePath: string): string {

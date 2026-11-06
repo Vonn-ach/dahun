@@ -20,6 +20,8 @@
   "content.checking.title": "Sedang disemak oleh penutur",
   "content.checking.body": "Setiap perkataan {language} disemak oleh dua penutur fasih sebelum dipaparkan dalam aplikasi. Pelajaran akan dipaparkan di sini sebaik sahaja siap.",
   "content.checking.progress": "{verified} daripada {total} perkataan telah disemak setakat ini.",
+  "content.preparing.title": "Sedang disediakan",
+  "content.preparing.body": "Kursus {language} belum mempunyai perkataan. Penutur sedang mencatat perkataan pertama, dan ia akan dipaparkan di sini selepas disemak oleh dua penutur.",
   "content.none.title": "Belum ada kursus",
   "content.none.body": "Versi aplikasi ini belum mempunyai kursus bahasa.",
 

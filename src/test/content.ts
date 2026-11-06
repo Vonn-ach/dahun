@@ -1,5 +1,5 @@
 // Fixture content for component tests. "tst" (Testish) is not a real language:
-// its forms are placeholder words, never Kayan or another Borneo language.
+// its forms are placeholder words, never text from any Borneo language.
 import type { Bundle, BundleEntry, Channel, ContentSource } from '../content';
 
 const entry = (

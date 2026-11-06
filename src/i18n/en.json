@@ -20,6 +20,8 @@
   "content.checking.title": "Being checked by speakers",
   "content.checking.body": "Every {language} word is checked by two fluent speakers before it appears in the app. Lessons will appear here as soon as they're ready.",
   "content.checking.progress": "{verified} of {total} words checked so far.",
+  "content.preparing.title": "Being prepared",
+  "content.preparing.body": "The {language} course has no words yet. Speakers are writing down the first ones, and they'll appear here once two speakers have checked them.",
   "content.none.title": "No course yet",
   "content.none.body": "This version of the app doesn't include a language course yet.",
 

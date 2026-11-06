@@ -36,7 +36,7 @@ test.describe('mobile navigation', () => {
     await nav.getByRole('link', { name: 'Learn' }).tap();
     await expectScreen(page, /\/$/, 'Learning path');
 
-    // The dev server builds the draft bundle, so the first real lesson is there.
+    // The e2e server runs the fixture course, which has real lesson ids.
     await page.getByRole('link', { name: 'Open the first lesson' }).tap();
     await expectScreen(page, /\/lesson\/[a-z0-9-]+$/, 'Lesson');
   });

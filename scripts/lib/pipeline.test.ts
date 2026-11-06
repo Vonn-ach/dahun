@@ -82,19 +82,22 @@ const emptyStats = {
 
 describe('adding a language folder', () => {
   it('makes a second language appear with no code changes', () => {
-    // Copy the real Kayan pack twice into a temp content folder: once as it is,
-    // and once as a pretend language "zzz" with new ids and a new name. The
-    // real content folder is only read.
+    // Copy the fixture pack twice into a temp content folder: once as it is,
+    // and once as a pretend language "zzz" with new ids and a new name.
     const languages = path.join(tmp, 'content', 'languages');
-    const kys = path.join(CONTENT_DIR, 'languages', 'kys');
-    cpSync(kys, path.join(languages, 'kys'), { recursive: true });
+    const tst = path.join(fixtureRoot('valid'), 'languages', 'tst');
+    cpSync(tst, path.join(languages, 'tst'), { recursive: true });
     const zzz = path.join(languages, 'zzz');
     mkdirSync(path.join(zzz, 'audio'), { recursive: true });
-    for (const file of readdirSync(kys).filter((f) => f.endsWith('.json'))) {
-      const text = readFileSync(path.join(kys, file), 'utf8')
-        .replace(/"kys-(s?[0-9]+)"/g, '"zzz-$1"')
-        .replace(/"kys"/g, '"zzz"');
+    for (const file of readdirSync(tst).filter((f) => f.endsWith('.json'))) {
+      // Ids and audio file names start with "tst-"; the placeholder forms never do.
+      const text = readFileSync(path.join(tst, file), 'utf8')
+        .replace(/tst-/g, 'zzz-')
+        .replace(/"tst"/g, '"zzz"');
       writeFileSync(path.join(zzz, file), text);
+    }
+    for (const file of readdirSync(path.join(tst, 'audio'))) {
+      cpSync(path.join(tst, 'audio', file), path.join(zzz, 'audio', file.replace(/^tst-/, 'zzz-')));
     }
     const languageFile = path.join(zzz, 'language.json');
     const language = JSON.parse(readFileSync(languageFile, 'utf8')) as {
@@ -105,21 +108,26 @@ describe('adding a language folder', () => {
 
     const report = validateContent({ contentRoot: path.join(tmp, 'content') });
     expect(report.errors).toBe(0);
-    expect(report.packs.map((p) => p.folder)).toEqual(['kys', 'zzz']);
+    expect(report.packs.map((p) => p.folder)).toEqual(['tst', 'zzz']);
 
     const bundles = report.packs.map((p) => buildBundle(p.pack!, 'draft'));
     const out = path.join(tmp, 'generated');
     emitBundles(bundles, 'draft', out);
 
     const index = readFileSync(path.join(out, 'index.ts'), 'utf8');
-    expect(index).toContain('"code":"kys"');
+    expect(index).toContain('"code":"tst"');
     expect(index).toContain('"code":"zzz"');
     expect(index).toContain('Zedish (test copy)');
     expect(index).toContain(`import('./zzz.bundle.json')`);
-    const kysBundle = JSON.parse(readFileSync(path.join(out, 'kys.bundle.json'), 'utf8')) as Bundle;
+    const tstBundle = JSON.parse(readFileSync(path.join(out, 'tst.bundle.json'), 'utf8')) as Bundle;
     const zzzBundle = JSON.parse(readFileSync(path.join(out, 'zzz.bundle.json'), 'utf8')) as Bundle;
-    expect(zzzBundle.entries).toHaveLength(kysBundle.entries.length);
-    expect(zzzBundle.entries.map((e) => e.form)).toEqual(kysBundle.entries.map((e) => e.form));
+    expect(zzzBundle.entries).toHaveLength(tstBundle.entries.length);
+    expect(zzzBundle.entries.map((e) => e.form)).toEqual(tstBundle.entries.map((e) => e.form));
+  });
+
+  it('validates the real content folder', () => {
+    // Whatever is in content/languages/ today must pass, even an empty new pack.
+    expect(validateContent({ contentRoot: CONTENT_DIR }).errors).toBe(0);
   });
 });
 

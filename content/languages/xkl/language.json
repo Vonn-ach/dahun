@@ -1,0 +1,44 @@
+{
+  "$schema": "../../../schemas/language.schema.json",
+  "code": "xkl",
+  "name": {
+    "en": "Kenyah",
+    "ms": "Bahasa Kenyah"
+  },
+  "region": "Sarawak, Malaysia, and Kalimantan, Indonesia",
+  "dialects": [
+    {
+      "id": "badeng",
+      "iso": "xkl",
+      "name": {
+        "en": "Badeng Kenyah",
+        "ms": "Kenyah Badeng"
+      }
+    }
+  ],
+  "defaultDialect": "badeng",
+  "orthography": {
+    "notes": {
+      "en": "In Badeng spelling the glottal stop is written as a letter, not with an apostrophe. Spelling is not standardised; record what speakers write.",
+      "ms": "Dalam ejaan Badeng, hentian glotis ditulis sebagai huruf, bukan dengan tanda koma atas. Ejaan belum diseragamkan; catat apa yang ditulis oleh penutur."
+    },
+    "normalization": {
+      "lowercase": true,
+      "unifyApostrophes": [
+        "’",
+        "ʼ",
+        "`",
+        "ʻ"
+      ],
+      "stripDiacritics": false,
+      "ignorePunctuation": "?!.,…",
+      "ignoreInLooseMatch": []
+    }
+  },
+  "uiPhrases": {},
+  "credits": {
+    "partner": null,
+    "speakers": []
+  },
+  "status": "draft"
+}

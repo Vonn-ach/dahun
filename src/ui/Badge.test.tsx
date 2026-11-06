@@ -4,8 +4,8 @@ import { Badge } from './Badge';
 
 describe('Badge', () => {
   it('uses the neutral tone by default', () => {
-    render(<Badge>Baram</Badge>);
-    expect(screen.getByText('Baram')).toHaveClass('badge', 'neutral');
+    render(<Badge>North</Badge>);
+    expect(screen.getByText('North')).toHaveClass('badge', 'neutral');
   });
 
   it('applies the requested tone', () => {

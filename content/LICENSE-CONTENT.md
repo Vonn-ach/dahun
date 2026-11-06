@@ -2,7 +2,7 @@
 
 **The language content in this folder (`content/`), including words, phrases, sentences, notes and audio recordings, is NOT covered by the MIT licence that applies to the code.**
 
-Status: **to be agreed with the Kayan community and the contributing speakers.** Until then:
+Status: **to be agreed with the Kenyah community and the contributing speakers.** Until then:
 
 - All rights in speaker contributions (corrections, new entries, recordings) remain with the speakers and their community. They are used in this app with their consent.
 - Material derived from third-party sources keeps those sources' terms. See `SOURCES.md`.

@@ -1,6 +1,9 @@
 import { defineConfig, devices } from '@playwright/test';
 
-const PORT = 5173;
+// Not the normal dev port (5173): the e2e server runs the fixture course from
+// tests/fixtures/, so it must never be mistaken for, or reuse, a dev server
+// showing real content.
+const PORT = 5174;
 const isCI = !!process.env['CI'];
 
 export default defineConfig({
@@ -24,10 +27,12 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
   ],
-  // The dev server is enough for smoke tests and needs no build first.
-  // Prompt 07 (offline/PWA) should switch this to `vite preview` of a real build.
+  // The dev server is enough for smoke tests and needs no build first. It runs
+  // on the placeholder "tst" course, so the tests don't depend on how many real
+  // words a pack has (D016). Prompt 07 (offline/PWA) should switch this to
+  // `vite preview` of a real build.
   webServer: {
-    command: 'npm run dev',
+    command: 'npm run dev:e2e',
     url: `http://localhost:${PORT}`,
     reuseExistingServer: !isCI,
     timeout: 60_000,

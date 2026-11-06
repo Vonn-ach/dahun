@@ -41,6 +41,17 @@ describe('PathScreen', () => {
     expect(screen.queryByRole('link', { name: 'Open the first lesson' })).not.toBeInTheDocument();
   });
 
+  it('says the course is being prepared when the pack has no words yet', () => {
+    const newPack = {
+      ...emptyBundle,
+      stats: { ...emptyBundle.stats, totalEntries: 0, totalLessons: 0 },
+    };
+    renderWithProviders(<PathScreen />, { content: staticSource([newPack], 'draft') });
+    expect(screen.getByRole('heading', { name: 'Being prepared' })).toBeInTheDocument();
+    expect(screen.getByText(/The Testish course has no words yet/)).toBeInTheDocument();
+    expect(screen.queryByText(/0 of 0/)).not.toBeInTheDocument();
+  });
+
   it('says so when the build has no course at all', () => {
     renderWithProviders(<PathScreen />, { content: staticSource([]) });
     expect(screen.getByRole('heading', { name: 'No course yet' })).toBeInTheDocument();
