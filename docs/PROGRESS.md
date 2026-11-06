@@ -6,12 +6,12 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 - Phase: 1 (MVP build)
 - Current prompt: 02 (content pipeline) is done. Content is validated, filtered by status and loaded as typed bundles. The Words screen lists the bundle, and the release build shows "Being checked by speakers" because nothing is verified yet. Locally, all of these pass: `validate:content` (0 errors, 16 warnings), lint, typecheck, unit tests (130), e2e (8 on Pixel 360×800 + Desktop), `build` and `build:draft`. The content-guardian audit found nothing blocking. It raised two warnings: one is fixed (`b794643`), and the other is a question for you (see Blockers).
-- Repo: https://github.com/Vonn-ach/dahun (public). Pushed up to the scaffold (`d1f059b`, CI green). **Not pushed yet:** 2 docs commits from 2026-11-05 and the 4 prompt 02 commits plus this log update.
+- Repo: https://github.com/Vonn-ach/dahun (public). Prompt 02 is pushed (`a1ed9f1`), and CI passed every step on GitHub, including the content checks and Playwright (run 42139332319).
 
 ## Next up
 
-1. **Push** the local commits, then check that CI is green on GitHub (CI now also runs the content scripts' tests). About 5 minutes.
-2. Decide the open question about what a speaker review covers (see Blockers). Then run **prompt 03 (lesson player)** in a fresh session. It can reuse `src/engine/normalize.ts` for answer checking. It must also decide how to handle the D015 problem: a typed answer can be "close" to two real words.
+1. Decide the two open questions under Blockers: what a speaker review covers, and kys-0012's "…". Each is a short decision.
+2. Run **prompt 03 (lesson player)** in a fresh session. It can reuse `src/engine/normalize.ts` for answer checking. It must also decide how to handle the D015 problem: a typed answer can be "close" to two real words.
 3. Book the first speaker verification session (`speaker-kit/SESSION_GUIDE.md`). Use the regenerated `verification-sheet.csv`, which now has the notes, and take the speaker questions below.
 
 ## Windows notes
