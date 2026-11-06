@@ -73,7 +73,7 @@ The engine compares the learner's answer with `form` and every `variants[].form`
 - **close**: equal once the `ignoreInLooseMatch` characters (e.g. a glottal stop written as `'`) are also removed, and each `looseEquivalents` character is replaced (e.g. `{"é": "e"}`). Counts as correct, and the learner sees a spelling nudge showing the full form.
 - **wrong**: anything else
 
-Each pack sets its own rules. Kenyah (Badeng) writes the glottal stop with the letter `q`, so it has no `ignoreInLooseMatch` characters and no `looseEquivalents` yet: a typed answer must match a form or variant exactly, apart from case, apostrophe look-alikes and the listed punctuation (D016). Add a rule only when speakers agree that a difference is a spelling slip, not a different word. Two entries whose forms are equal at the "close" level make a typed answer ambiguous (D015); the validator lists them as warnings.
+Each pack sets its own rules. Kenyah (Badeng) writes the glottal stop with the letter `q`, and a missing `q` counts as wrong (D016). So it has no `ignoreInLooseMatch` characters and no `looseEquivalents` yet: a typed answer must match a form or variant exactly, apart from case, apostrophe look-alikes and the listed punctuation (D016). Add a rule only when speakers agree that a difference is a spelling slip, not a different word. Two entries whose forms are equal at the "close" level make a typed answer ambiguous (D015); the validator lists them as warnings.
 
 ## Kenyah pack (`xkl`)
 
