@@ -18,6 +18,7 @@
     "content:release": "tsx scripts/build-content.ts",
     "content:draft": "tsx scripts/build-content.ts --include-drafts",
     "gen:types": "tsx scripts/gen-types.ts",
+    "sheet": "tsx scripts/build-verification-sheet.ts",
     "pretest": "npm run content:draft -- --quiet",
     "test": "vitest run",
     "e2e": "playwright test",

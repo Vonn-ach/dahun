@@ -83,4 +83,4 @@ The Kayan seed (`kys`) was compiled from the sources listed in `content/SOURCES.
 - One phrase ("Hi aran ka'?") and 9 of the 14 sentences are `constructed: true`, meaning they were assembled from dictionary words.
 - `legacy-id-map.json` maps the ids used by the earlier single-file trainer (`app: "dahun-kayan"`) to these entry ids, so old backups can be imported.
 
-Use `speaker-kit/verification-sheet.csv` (pre-filled with all 224 items) to check them with speakers.
+Use `speaker-kit/verification-sheet.csv` (every entry and sentence, with their notes) to check them with speakers. `npm run sheet` makes it from the content files (D013), so run it again after the content changes.
