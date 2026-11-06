@@ -23,6 +23,7 @@ In practice:
 ## 2. Consent for recordings and corrections
 
 - Use `speaker-kit/consent-form.md` (Malay + English) **before** recording anyone. Record verbal consent at the start of the audio if the person prefers not to sign.
+- The form's section 4 is a personal data notice in the style of the PDPA (what is collected, why, who sees it, where it's kept and for how long, and how to see, correct or complain). Fill in its blanks and have it reviewed before first use. The points to raise are in `speaker-kit/README.md`.
 - A voice recording is personal data. Store originals privately (not in the public repo) and publish only the trimmed clips the speaker agreed to.
 - Speakers can withdraw. On request, remove their clips and credit within 30 days, and record the removal in `content/CHANGELOG.md`.
 - **Minors**: do not record anyone under 18 without a parent's or guardian's written consent.

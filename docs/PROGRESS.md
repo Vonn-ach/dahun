@@ -65,6 +65,10 @@ These are real things to look at. Nothing was changed. Kayan forms are for speak
 
 - **Malay UI strings:** `src/i18n/ms.json` was written by Claude. Please read it through, or ask a fluent Malay speaker to (UI text only, no Kayan). Prompt 02 added the Words screen, Preview/Beta banner and "Sedang disemak oleh penutur" strings.
 - **kys-0012 ("…" in the form):** keep it out of typing exercises, or get a full example from a speaker? (See the validation list above.)
+- **Consent form, before the first speaker session:** section 4 (personal data notice) is drafted.
+  - Fill in its blanks: contact details, who else sees the data, where it's stored, how long it's kept, and the JPDP's contact.
+  - Have someone with legal knowledge review it. The questions are in `speaker-kit/README.md`.
+  - Have a fluent Malay speaker read the BM text.
 - **Before the first entry becomes `verified`: what does a speaker's review cover?** Today `review[].form` records only the main form. A verified entry still ships its variants (28 entries have them) and its notes, and 62 of the 76 notes contain Kayan words. Adding or changing a variant or note later doesn't send the entry back for checking. Options:
   1. Each review records the variants and note it saw (a snapshot), and the validator checks they still match.
   2. Release and beta builds leave out variants and notes until those have their own review.
@@ -104,6 +108,7 @@ Only speakers can answer these. Claude must not guess. Corrections go into `cont
 ## Session log
 
 <!-- newest first: date · prompt · what changed · commit -->
+- 2026-11-06 · speaker kit · Drafted the personal data notice (section 4) in the consent form, in BM and EN, plus a consent tick for it, and listed the points for a legal review in `speaker-kit/README.md`. Not yet reviewed.
 - 2026-11-06 · 02 content pipeline · D013 schema changes and the legacy-id-map schema; owner decision D015 (é is "close"); validator (Ajv + cross-reference and quality checks); status-filtered bundles with typed loaders (D012); `src/content` hooks; Words screen with search, unit chips and badges; "Being checked by speakers" state; Preview/Beta banner and noindex (D007); generated verification sheet; build guard against a bare `vite build` (from the content-guardian audit) · 4c70172, eae153e, 203bf9e, 8560018, b794643
 - 2026-11-05 · 01 scaffold · Vite + React + TS app with all 7 routes and placeholder screens, responsive nav (bottom bar on phones, top bar on desktop), design tokens (light/dark + `data-theme`), self-hosted fonts, UI kit (Button, Card, Chip, Badge, ProgressBeads), i18n (en/ms + `useT()`), ESLint/Prettier/Vitest/Playwright, CI workflow; CLAUDE.md layout (D014) and golden rule 4 (D007) updated · d1f059b (CI green on GitHub)
 - 2026-11-05 · setup · Pushed to github.com/Vonn-ach/dahun. The first three commits were re-signed with the GitHub noreply address before the first push, so their hashes changed.
