@@ -1,7 +1,8 @@
 /// <reference types="vitest/config" />
 import { readFileSync } from 'node:fs';
-import { defineConfig, type Plugin } from 'vite';
+import { defineConfig, type Plugin, type UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { checkBuildChannel } from './scripts/lib/build-guard';
 
 /** The channel scripts/build-content.ts last built: release, beta or draft. */
 function contentChannel(): string | undefined {
@@ -30,7 +31,7 @@ const noindexUnlessRelease: Plugin = {
   },
 };
 
-export default defineConfig({
+const config: UserConfig = {
   plugins: [react(), noindexUnlessRelease],
   server: {
     // Fixed port so Playwright and the docs can rely on it.
@@ -69,4 +70,17 @@ export default defineConfig({
       },
     ],
   },
+};
+
+export default defineConfig(({ command, mode, isPreview }) => {
+  // A bare `vite build` must not ship a draft or beta bundle by accident (golden rule 4).
+  if (command === 'build' && !isPreview) {
+    const problem = checkBuildChannel(
+      contentChannel(),
+      mode,
+      process.env['RELEASE_ALLOW_SPEAKER_CHECKED'] === '1',
+    );
+    if (problem) throw new Error(problem);
+  }
+  return config;
 });

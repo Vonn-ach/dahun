@@ -13,7 +13,7 @@
     "dev": "vite",
     "prebuild": "npm run content:release",
     "build": "vite build",
-    "build:draft": "npm run content:draft && vite build",
+    "build:draft": "npm run content:draft && vite build --mode draft",
     "validate:content": "tsx scripts/validate-content.ts",
     "content:release": "tsx scripts/build-content.ts",
     "content:draft": "tsx scripts/build-content.ts --include-drafts",
