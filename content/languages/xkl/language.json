@@ -19,8 +19,8 @@
   "defaultDialect": "badeng",
   "orthography": {
     "notes": {
-      "en": "The glottal stop is written as a letter.",
-      "ms": "Hentian glotis ditulis sebagai huruf."
+      "en": "The glottal stop is written with the letter q.",
+      "ms": "Hentian glotis ditulis dengan huruf q."
     },
     "normalization": {
       "lowercase": true,

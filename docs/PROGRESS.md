@@ -12,7 +12,7 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 ## Next up
 
-1. **Write your first Badeng words** (owner, no code): 100–200 everyday words and short phrases in a copy of `speaker-kit/new-words-template.csv` saved in the git-ignored `private/` folder (column guide in `speaker-kit/README.md`), using the 11 unit themes. Also fill in your own consent form (with a speaker code and your credit choice) and keep it private. Tell Claude whether the glottal stop is written **k** or **q**.
+1. **Write your first Badeng words** (owner, no code): 100–200 everyday words and short phrases in a copy of `speaker-kit/new-words-template.csv` saved in the git-ignored `private/` folder (column guide in `speaker-kit/README.md`), using the 11 unit themes. Also fill in your own consent form (with a speaker code and your credit choice) and keep it private.
 2. **Import the sheet** (a short Claude session): write `scripts/import-csv.ts` (as planned in prompt 14, step 2). It turns the CSV into `lexicon.json` entries (`xkl-0001`…, status `draft`, a source key made from your speaker code), and groups them into lessons of 4–7 in `course.json`. It must refuse empty forms and never change a form (whitespace trim only). Defaults: `dialect: badeng`, `status: draft`, `constructed` from its column. `other_badeng_spellings` become Badeng variants, and the importer never guesses another variety.
 3. Then **prompt 03 (lesson player)** in a fresh session, and **book a second Badeng speaker** to check the list (`speaker-kit/SESSION_GUIDE.md`).
 
@@ -25,7 +25,7 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 - **Dialects:** Badeng is the main and default dialect (`badeng`). Other Kenyah varieties (Lepo' Tau, Lepo' Ke', Bakung and others) share ISO code `xkl`. Each one is added to `language.json → dialects[]` when a speaker of that variety joins. Their forms go into `variants[]` and are shown as "<variety>: …" (D009), never as corrections of Badeng. If varieties turn out too different for one course, splitting them needs a small code change, because packs are keyed by ISO code.
 - **Speakers:** the owner counts as a speaker, with their own code, consent form and credit choice. The code isn't linked to the owner's name in the repo unless the owner chooses name credit. `verified` still needs a second, different speaker (D008), ideally a Badeng speaker from another family or village.
-- **Spelling:** the glottal stop is written as a letter, so `xkl` has no `ignoreInLooseMatch` rule. Typed answers must match a form or variant, apart from case, apostrophe look-alikes and the listed punctuation.
+- **Spelling:** the glottal stop is written with the letter `q` (owner, 2026-11-06), so `xkl` has no `ignoreInLooseMatch` rule. Typed answers must match a form or variant, apart from case, apostrophe look-alikes and the listed punctuation.
 - **Tests no longer use real content:** `npm run e2e` starts `npm run dev:e2e`, which builds the placeholder `tst` course from `tests/fixtures/packs/valid` on port **5174**. After e2e, `src/generated/` holds that fixture bundle until the next `dev`, `build`, `lint`, `typecheck` or `test`. The build guard refuses any build from that fixture bundle, even `vite build --mode draft` (meta.json records which content folder a bundle came from).
 - **Lint guard:** golden rule 5 now reads the pack codes from `content/languages/`, so `'xkl'` (and any future pack code) is rejected as a literal in `src/`.
 - **Dropped:** importing backups from the old Kayan trainer (D010). The Kayan-only Hub cover image was also deleted.
@@ -63,7 +63,6 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 ## Blockers / questions for the owner
 
-- **Glottal stop: k or q?** You said it's written as a letter. Which one, or both? It goes into `language.json → orthography.notes` and the docs.
 - **Rakyat Builders Hub listing:** the drafted text and cover were about Kayan, and the cover is deleted. If you submitted the listing, edit it to say Kenyah (Badeng). Ask Claude to redraft the text. A new cover makes sense once there are some Badeng words to show.
 - **Malay UI strings:** `src/i18n/ms.json` was written by Claude. Please read it through, or ask a fluent Malay speaker to (UI text only, no Kenyah).
 - **Consent form, before the first speaker session:** section 4 (personal data notice) is drafted.
@@ -84,7 +83,7 @@ Claude Code updates this at the end of every session (`/session-wrap`). Read it 
 
 Only speakers can answer these. Claude must not guess. Corrections go into `content/languages/xkl/proposals/`, never straight into the lexicon.
 
-- **Spelling conventions for Badeng:** how is the glottal stop written (k or q), and are there letters or accents that speakers write differently? Record the agreed conventions in `language.json → orthography.notes`.
+- **Spelling conventions for Badeng:** do other speakers also write the glottal stop with `q`, and are there letters or accents that speakers write differently? Record the agreed conventions in `language.json → orthography.notes`.
 - **Variety names:** how should the course name the varieties in English and Malay (for example "Badeng Kenyah" / "Kenyah Badeng")?
 - **Other varieties:** which Kenyah varieties do you want next, and who could speak for them?
 - **The app's name:** is a Kenyah name better than "Dahun" (a Kayan word)? Speakers give the word; Claude never suggests one.
@@ -101,6 +100,7 @@ The earlier Kayan seed (`kys`: 210 draft entries, 14 sentences, 0 verified) is k
 ## Session log
 
 <!-- newest first: date · prompt · what changed · commit -->
+- 2026-11-06 · spelling · The owner confirmed that the Badeng glottal stop is written with `q`. Recorded in `language.json` (orthography notes), CLAUDE.md rule 2, D016 and the content model.
 - 2026-11-06 · switch to Kenyah · Owner decision D016: the first course is Kenyah (Badeng, `xkl`). Removed the Kayan pack (tag `kayan-seed-v1`). Added an empty `xkl` pack and a new-words template. Moved e2e onto the fixture course. The lint guard now reads pack codes from the content folder. Added the "Being prepared" state. Overhauled the docs, prompts 03–14 and the speaker kit. Fixed the content-guardian findings (build guard refuses fixture bundles, no speaker code tied to a name, consent form covers giving words, spelling notes limited to what the owner said) · 159b31d, be07985, be11d0d
 - 2026-11-06 · showcase · The repo was private for a short time and is public again. CI is green for every push up to `2443e5c`. The README status was brought up to date for the Rakyat Builders Hub listing, and the Hub form answers were drafted in chat (about Kayan; now out of date).
 - 2026-11-06 · speaker kit · Drafted the personal data notice (section 4) in the consent form, in BM and EN, plus a consent tick for it, and listed the points for a legal review in `speaker-kit/README.md`. Not yet reviewed.

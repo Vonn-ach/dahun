@@ -73,7 +73,7 @@ The engine compares the learner's answer with `form` and every `variants[].form`
 - **close**: equal once the `ignoreInLooseMatch` characters (e.g. a glottal stop written as `'`) are also removed, and each `looseEquivalents` character is replaced (e.g. `{"é": "e"}`). Counts as correct, and the learner sees a spelling nudge showing the full form.
 - **wrong**: anything else
 
-Each pack sets its own rules. Kenyah (Badeng) writes the glottal stop as a letter, so it has no `ignoreInLooseMatch` characters and no `looseEquivalents` yet: a typed answer must match a form or variant exactly, apart from case, apostrophe look-alikes and the listed punctuation (D016). Add a rule only when speakers agree that a difference is a spelling slip, not a different word. Two entries whose forms are equal at the "close" level make a typed answer ambiguous (D015); the validator lists them as warnings.
+Each pack sets its own rules. Kenyah (Badeng) writes the glottal stop with the letter `q`, so it has no `ignoreInLooseMatch` characters and no `looseEquivalents` yet: a typed answer must match a form or variant exactly, apart from case, apostrophe look-alikes and the listed punctuation (D016). Add a rule only when speakers agree that a difference is a spelling slip, not a different word. Two entries whose forms are equal at the "close" level make a typed answer ambiguous (D015); the validator lists them as warnings.
 
 ## Kenyah pack (`xkl`)
 
@@ -83,7 +83,7 @@ Kenyah is a family of varieties. Badeng, Lepo' Tau, Lepo' Ke', Bakung and others
 - **Other varieties** are added to `language.json → dialects[]` when one of their speakers joins. Their forms go into `variants[]` with that dialect, and are shown as "<variety>: …" and accepted as typed answers (D009). An entry that exists only in another variety gets that variety as its `dialect`.
 - **Sources:** the first words come from Badeng speakers, starting with the owner (once their consent form is filed, with a speaker code like any speaker). Each speaker's contribution gets a source key made from their code, such as `spkNN-2026`. Which code belongs to whom is kept private (`speaker-kit/SESSION_GUIDE.md`). Written sources are added only after their licence is checked.
 - **Status:** new entries start as `draft`. The owner's own `ok` review makes an entry `speaker-checked`. A second, different speaker makes it `verified` (D008).
-- **Spelling:** the owner writes the glottal stop as a letter (k or q: to be confirmed). Record exactly what speakers write, and add only conventions that speakers have stated to `language.json → orthography.notes`.
+- **Spelling:** the owner writes the glottal stop with the letter `q` (owner, 2026-11-06). Other Badeng speakers are to confirm it. Record exactly what speakers write, and add only conventions that speakers have stated to `language.json → orthography.notes`.
 
 ### Earlier Kayan seed
 
