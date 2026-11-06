@@ -43,6 +43,8 @@ export function emitBundles(
   bundles: readonly Bundle[],
   channel: Channel,
   outDir: string,
+  /** The content folder the bundles were built from, relative to the repo ("content" normally). */
+  contentDir = 'content',
 ): EmitResult {
   mkdirSync(outDir, { recursive: true });
   const sorted = [...bundles].sort((a, b) => a.code.localeCompare(b.code));
@@ -59,7 +61,8 @@ export function emitBundles(
   };
   for (const bundle of sorted) write(`${bundle.code}.bundle.json`, JSON.stringify(bundle));
   write('index.ts', indexSource(sorted.map(summarize), channel));
-  // Read by vite.config.ts to add noindex to builds that aren't release builds (D007).
-  write('meta.json', `${JSON.stringify({ channel })}\n`);
+  // Read by vite.config.ts: noindex for builds that aren't release builds (D007),
+  // and the build guard, which refuses bundles that didn't come from content/.
+  write('meta.json', `${JSON.stringify({ channel, contentDir })}\n`);
   return { files };
 }

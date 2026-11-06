@@ -7,7 +7,7 @@ Machine-readable details, including the licence notes, are in each language's `l
 | Key | Source | Dialect | How we use it |
 |---|---|---|---|
 
-_No sources yet._ The first words will come from Badeng speakers, starting with the project owner once their consent form is filed. Each speaker contribution gets a source key here (for example `spk01-2026`, "Words given by speaker SPK01"). Written sources, such as word lists, dictionaries, church or school materials, are added only after checking their licence. Every entry is still confirmed by speakers before release.
+_No sources yet._ The first words will come from Badeng speakers, starting with the project owner once their consent form is filed. Each speaker contribution gets a source key here, made from the speaker's code (for example `spkNN-2026`, "Words given by speaker SPKNN"). Speakers are credited only as they chose on their consent form. Written sources, such as word lists, dictionaries, church or school materials, are added only after checking their licence. Every entry is still confirmed by speakers before release.
 
 ## Speakers
 

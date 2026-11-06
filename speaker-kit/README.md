@@ -6,7 +6,7 @@ Everything you need to add and check content and record audio with Kenyah speake
 |---|---|
 | `SESSION_GUIDE.md` | How to run a 60-minute verification and recording session |
 | `consent-form.md` | Bilingual (BM/EN) consent form. Print it or share it. Keep signed copies **private** |
-| `new-words-template.csv` | Empty sheet (form, English, Malay, unit, kind, other spellings, note, where from) for writing down new Badeng words. Claude Code turns it into content files and never changes a word |
+| `new-words-template.csv` | Empty sheet for writing down new Badeng words. **Save your filled-in copy in the git-ignored `private/` folder** (or outside the repo), not over this file. Columns: `form` exactly as you write it; `english`; `malay`; `unit` (one of the 11 unit ids, e.g. `greetings`); `kind` (`word` or `phrase`); `other_badeng_spellings` (other Badeng spellings only; other Kenyah varieties come later from their own speakers); `note`; `where_from` (a speaker code or source key, never a person's name or village); `constructed` (`yes` if you assembled it from parts rather than saying it as a whole). Claude Code turns it into content files and never changes a word |
 | `verification-sheet.csv` | Every entry and sentence (none yet: the Kenyah course is new), ready to tick off in Excel or Google Sheets. The `note_in_draft` column has the usage notes, some with Kenyah words for the speaker to check. It is made from the content files by `npm run sheet`, so don't edit it by hand: save a copy for each session |
 | `RECORDING_CHECKLIST.md` | Getting clean audio with a phone |
 

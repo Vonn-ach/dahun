@@ -55,6 +55,7 @@ describe('emitBundles', () => {
     expect((JSON.parse(text) as Bundle).channel).toBe('release');
     expect(JSON.parse(readFileSync(path.join(tmp, 'meta.json'), 'utf8'))).toEqual({
       channel: 'release',
+      contentDir: 'content',
     });
   });
 

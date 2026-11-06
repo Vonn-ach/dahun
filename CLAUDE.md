@@ -13,11 +13,11 @@ Project memory for Claude Code. Read this first in every session, then `docs/PRO
 
 ## Golden rules (never break these)
 
-1. **Never invent, "fix" or translate indigenous-language text yourself.** Your training data on Kenyah and other Borneo languages is thin and often wrong. Every Kenyah word, phrase or sentence a learner sees must come from `content/languages/<code>/`. That holds even though the owner is a speaker: words come from the owner or other speakers in chat or in files, never from you. If something is missing, stop and say so. Add a `TODO(content)` and ask the owner. Do not fill the gap.
+1. **Never invent, "fix" or translate indigenous-language text yourself.** Your training data on Kenyah and other Borneo languages is thin and often wrong. Every indigenous-language word, phrase or sentence a learner sees must come from `content/languages/<code>/`. That holds even though the owner is a speaker: words come from the owner or other speakers in chat or in files, never from you. If something is missing, stop and say so. Add a `TODO(content)` and ask the owner. Do not fill the gap.
 2. **Never change a form in a content file** unless the owner gives you the corrected form from a speaker. Keep every character exactly as written: a glottal stop written as a letter (Badeng Kenyah) stays that letter, and one written as an apostrophe is the ASCII `'` (U+0027). Do not "normalise" spelling, and never turn one variety's form into another's.
 3. **No text-to-speech for indigenous languages.** Audio comes only from recorded speakers. If an entry has no audio, show no audio button.
 4. **Respect content status.** Release builds include only entries with status `verified` (or `speaker-checked` when the release flag allows it). `draft` content shows only in dev builds and the labelled preview (D007), with a visible "draft" badge.
-5. **Keep the code language-agnostic.** No `if (lang === 'xkl')`. Anything language-specific (orthography, answer normalisation, dialects, UI phrases such as a praise word) lives in `language.json`. The lint rule rejects any pack code used as a literal in `src/`.
+5. **Keep the code language-agnostic.** No `if (lang === 'xkl')`. Anything language-specific (orthography, answer normalisation, dialects, UI phrases such as a praise word) lives in `language.json`. The lint rule rejects the code of every pack in `content/languages/` when it appears as a string literal in `src/` (outside tests). It can't catch everything, such as template strings, so the rule still applies where lint is silent.
 6. **No tracking, ads or personal data collection** in the MVP. Progress stays on the device. Anything else needs a written decision in `docs/DECISIONS.md` and the consent text in `docs/ETHICS_AND_DATA.md`.
 
 ## Stack

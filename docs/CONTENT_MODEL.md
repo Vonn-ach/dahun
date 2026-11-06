@@ -81,9 +81,9 @@ Kenyah is a family of varieties. Badeng, Lepo' Tau, Lepo' Ke', Bakung and others
 
 - **Main dialect: `badeng`**, the owner's variety. Every entry's `form` is Badeng until a decision says otherwise.
 - **Other varieties** are added to `language.json → dialects[]` when one of their speakers joins. Their forms go into `variants[]` with that dialect, and are shown as "<variety>: …" and accepted as typed answers (D009). An entry that exists only in another variety gets that variety as its `dialect`.
-- **Sources:** the first words come from Badeng speakers, starting with the owner (`SPK01`, once their consent form is filed). Each speaker's contribution gets a source key such as `spk01-2026`. Written sources are added only after their licence is checked.
+- **Sources:** the first words come from Badeng speakers, starting with the owner (once their consent form is filed, with a speaker code like any speaker). Each speaker's contribution gets a source key made from their code, such as `spkNN-2026`. Which code belongs to whom is kept private (`speaker-kit/SESSION_GUIDE.md`). Written sources are added only after their licence is checked.
 - **Status:** new entries start as `draft`. The owner's own `ok` review makes an entry `speaker-checked`. A second, different speaker makes it `verified` (D008).
-- **Spelling:** the glottal stop is written as a letter, not an apostrophe. Record exactly what speakers write, and write the conventions down in `language.json → orthography.notes`.
+- **Spelling:** the owner writes the glottal stop as a letter (k or q: to be confirmed). Record exactly what speakers write, and add only conventions that speakers have stated to `language.json → orthography.notes`.
 
 ### Earlier Kayan seed
 

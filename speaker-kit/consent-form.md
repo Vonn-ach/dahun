@@ -10,14 +10,14 @@
 
 ### 1. Apa yang saya minta / What I'm asking
 
-**BM:** Saya ingin anda (a) menyemak perkataan dan ayat bahasa Kenyah, dan (b) merakam suara anda menyebutnya, untuk digunakan dalam aplikasi pembelajaran percuma "Dahun".
+**BM:** Saya ingin anda (a) memberikan perkataan, frasa dan nota baharu dalam bahasa Kenyah, (b) menyemak perkataan dan ayat bahasa Kenyah, dan (c) merakam suara anda menyebutnya, untuk digunakan dalam aplikasi pembelajaran percuma "Dahun". Anda boleh memilih untuk melakukan satu, dua atau ketiga-tiganya.
 
-**EN:** I'd like you to (a) check Kenyah words and sentences, and (b) record your voice saying them, for use in the free learning app "Dahun".
+**EN:** I'd like you to (a) give new Kenyah words, phrases and notes, (b) check Kenyah words and sentences, and (c) record your voice saying them, for use in the free learning app "Dahun". You can choose to do one, two or all three.
 
 ### 2. Bagaimana ia digunakan / How it will be used
 
-- Rakaman pendek dan perkataan yang disemak akan dimainkan dan dipaparkan dalam aplikasi, termasuk di laman web dan di telefon Android.
-  Short clips and checked words will be played and shown in the app, on the web and on Android phones.
+- Rakaman pendek, dan perkataan yang anda berikan atau semak, akan dimainkan dan dipaparkan dalam aplikasi, termasuk di laman web dan di telefon Android.
+  Short clips, and the words you give or check, will be played and shown in the app, on the web and on Android phones.
 - Rakaman asal disimpan secara peribadi dan tidak dikongsi secara awam.
   Original full recordings are stored privately and not shared publicly.
 - Rakaman anda **tidak** akan dijual dan **tidak** akan diberi kepada syarikat AI untuk melatih model.
@@ -27,8 +27,8 @@
 
 - Penyertaan adalah sukarela. Anda boleh berhenti bila-bila masa.
   Taking part is voluntary. You can stop at any time.
-- Anda boleh menarik balik persetujuan kemudian. Rakaman dan nama anda akan dibuang daripada aplikasi dalam masa 30 hari.
-  You can withdraw consent later. Your recordings and credit will be removed from the app within 30 days.
+- Anda boleh menarik balik persetujuan kemudian. Rakaman dan nama anda akan dibuang daripada aplikasi dalam masa 30 hari. Perkataan yang anda berikan juga dibuang, kecuali jika penutur lain telah memberikan atau mengesahkannya secara berasingan.
+  You can withdraw consent later. Your recordings and credit will be removed from the app within 30 days. Words you gave are removed too, unless another speaker has given or confirmed them separately.
 - Anda boleh menolak untuk merakam perkataan atau topik tertentu.
   You may decline to record any word or topic.
 
@@ -43,13 +43,13 @@ The organiser named above is responsible for your personal data in this project.
   Your name, signature and date on this form, and your phone number or email if you give them.
 - Dialek atau kampung anda, kod penutur anda (contohnya SPK01) dan cara anda mahu dihargai.
   Your dialect or village, your speaker code (for example SPK01) and how you want to be credited.
-- Rakaman suara anda, dan semakan serta pembetulan perkataan yang anda buat.
-  Your voice recordings, and the checks and corrections you make to words.
+- Rakaman suara anda, dan perkataan yang anda berikan, semak atau betulkan.
+  Your voice recordings, and the words you give, check or correct.
 
 **Untuk apa / What it is used for**
 
-- Hanya untuk tujuan dalam bahagian 2: menggunakan semakan dan klip anda dalam aplikasi, menghargai anda mengikut pilihan anda, menghubungi anda tentang sumbangan anda, dan menyimpan bukti persetujuan anda.
-  Only for the purposes in section 2: using your checks and clips in the app, crediting you the way you chose, contacting you about your contribution, and keeping proof of your consent.
+- Hanya untuk tujuan dalam bahagian 2: menggunakan perkataan, semakan dan klip anda dalam aplikasi, menghargai anda mengikut pilihan anda, menghubungi anda tentang sumbangan anda, dan menyimpan bukti persetujuan anda.
+  Only for the purposes in section 2: using your words, checks and clips in the app, crediting you the way you chose, contacting you about your contribution, and keeping proof of your consent.
 
 **Siapa yang boleh melihatnya / Who can see it**
 
@@ -67,8 +67,8 @@ The organiser named above is responsible for your personal data in this project.
 
 **Pilihan dan hak anda / Your choices and rights**
 
-- Memberikan maklumat ini adalah sukarela. Tanpa persetujuan anda, kami tidak boleh menggunakan semakan atau rakaman anda. Jika anda tidak mahu menandatangani, anda boleh menyatakan persetujuan secara lisan pada permulaan rakaman.
-  Giving this information is voluntary. Without your consent we cannot use your checks or recordings. If you prefer not to sign, you can give your consent out loud at the start of the recording.
+- Memberikan maklumat ini adalah sukarela. Tanpa persetujuan anda, kami tidak boleh menggunakan perkataan, semakan atau rakaman anda. Jika anda tidak mahu menandatangani, anda boleh menyatakan persetujuan secara lisan pada permulaan rakaman.
+  Giving this information is voluntary. Without your consent we cannot use your words, checks or recordings. If you prefer not to sign, you can give your consent out loud at the start of the recording.
 - Anda boleh meminta untuk melihat data yang kami simpan tentang anda, membetulkannya, atau menghadkan cara ia digunakan. Hubungi penganjur. Kami akan menjawab dalam masa 21 hari.
   You can ask to see the data we hold about you, to correct it, or to limit how it is used. Contact the organiser. We will reply within 21 days.
 - Jika anda tidak berpuas hati, hubungi penganjur dahulu. Anda juga boleh membuat aduan kepada Jabatan Perlindungan Data Peribadi (JPDP): _______________________.
@@ -87,6 +87,7 @@ ______________________________________________ (tulis apa yang dipersetujui / wr
 ### 7. Persetujuan / Consent
 
 ☐ Saya telah membaca notis data peribadi dalam bahagian 4 (atau ia telah dibacakan kepada saya), dan bersetuju data peribadi saya digunakan seperti yang diterangkan. / I have read the personal data notice in section 4 (or had it read to me), and agree to my personal data being used as it describes.
+☐ Saya setuju perkataan, frasa dan nota yang saya berikan digunakan dalam aplikasi. / I agree that words, phrases and notes I give may be used in the app.
 ☐ Saya setuju perkataan yang saya semak digunakan dalam aplikasi. / I agree that words I check may be used in the app.
 ☐ Saya setuju suara saya dirakam dan klip pendek digunakan dalam aplikasi. / I agree to be recorded and for short clips to be used in the app.
 ☐ Saya berumur 18 tahun ke atas (atau ibu bapa/penjaga menandatangani di bawah). / I am 18 or older (or a parent/guardian signs below).

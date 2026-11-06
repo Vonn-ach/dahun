@@ -2,18 +2,21 @@
 import { readFileSync } from 'node:fs';
 import { defineConfig, type Plugin, type UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { checkBuildChannel } from './scripts/lib/build-guard';
+import { checkBuildChannel, type ContentMeta } from './scripts/lib/build-guard';
 
-/** The channel scripts/build-content.ts last built: release, beta or draft. */
-function contentChannel(): string | undefined {
+/** What scripts/build-content.ts last built: its channel and content folder. */
+function contentMeta(): ContentMeta | undefined {
   try {
-    const meta = JSON.parse(
+    return JSON.parse(
       readFileSync(new URL('./src/generated/meta.json', import.meta.url), 'utf8'),
-    ) as { channel?: string };
-    return meta.channel;
+    ) as ContentMeta;
   } catch {
     return undefined;
   }
+}
+
+function contentChannel(): string | undefined {
+  return contentMeta()?.channel;
 }
 
 /**
@@ -76,7 +79,7 @@ export default defineConfig(({ command, mode, isPreview }) => {
   // A bare `vite build` must not ship a draft or beta bundle by accident (golden rule 4).
   if (command === 'build' && !isPreview) {
     const problem = checkBuildChannel(
-      contentChannel(),
+      contentMeta(),
       mode,
       process.env['RELEASE_ALLOW_SPEAKER_CHECKED'] === '1',
     );

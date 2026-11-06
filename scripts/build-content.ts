@@ -7,7 +7,7 @@ import path from 'node:path';
 import { parseArgs } from 'node:util';
 import { buildBundle, channelFor } from './lib/bundle';
 import { emitBundles } from './lib/emit';
-import { displayPath, GENERATED_DIR } from './lib/paths';
+import { CONTENT_DIR, displayPath, GENERATED_DIR } from './lib/paths';
 import { formatReport } from './lib/report';
 import { validateContent } from './lib/validate';
 
@@ -39,7 +39,9 @@ const channel = channelFor({
 });
 const bundles = report.packs.flatMap((p) => (p.pack ? [buildBundle(p.pack, channel)] : []));
 const outDir = values.out ? path.resolve(values.out) : GENERATED_DIR;
-const { files } = emitBundles(bundles, channel, outDir);
+// Recorded in meta.json so the build guard can refuse fixture or test content.
+const contentDir = displayPath(values.content ? path.resolve(values.content) : CONTENT_DIR);
+const { files } = emitBundles(bundles, channel, outDir, contentDir);
 
 if (!values.quiet) {
   console.log(`Content bundles (${channel}) → ${displayPath(outDir)}/`);

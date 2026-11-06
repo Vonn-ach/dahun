@@ -38,8 +38,8 @@ Read `prompts/README.md` once. Then, per session:
 ## Step 5: Content track (start this week)
 
 1. Read `docs/ETHICS_AND_DATA.md` and `speaker-kit/SESSION_GUIDE.md`.
-2. Fill in your own consent form as speaker `SPK01` and keep it private. You are the first speaker of this course.
-3. Write your first 100–200 everyday Badeng words and short phrases in `speaker-kit/new-words-template.csv`, using the 11 unit themes (greetings, numbers, people, food, time, body, nature, describing, actions, questions, culture). Claude Code turns the sheet into content files. It never adds or changes a word.
+2. Fill in your own consent form and keep it private. You are the first speaker of this course: give yourself a speaker code like any speaker, and choose how you want to be credited (name, initials or anonymous). Which code belongs to whom stays off the repo.
+3. Write your first 100–200 everyday Badeng words and short phrases in a copy of `speaker-kit/new-words-template.csv`, saved in the git-ignored `private/` folder (the column guide is in `speaker-kit/README.md`), using the 11 unit themes (greetings, numbers, people, food, time, body, nature, describing, actions, questions, culture). Claude Code turns the sheet into content files. It never adds or changes a word.
 4. Make a list of 3–5 other Badeng speakers who could check your list: relatives, church members, Kenyah associations, people from your village or longhouse. Aim for at least one elder and one fluent younger adult. A word becomes "verified" only when a second speaker agrees.
 5. First session: 60 minutes, about 50 entries (Units 1–3), with `speaker-kit/consent-form.md` and the regenerated `speaker-kit/verification-sheet.csv`. Record audio on your phone at the same time.
 6. Speakers of other Kenyah varieties (Lepo' Tau, Lepo' Ke' and others) are welcome later: their forms are added as labelled variants next to Badeng, never as "corrections".

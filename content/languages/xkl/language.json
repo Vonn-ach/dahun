@@ -19,8 +19,8 @@
   "defaultDialect": "badeng",
   "orthography": {
     "notes": {
-      "en": "In Badeng spelling the glottal stop is written as a letter, not with an apostrophe. Spelling is not standardised; record what speakers write.",
-      "ms": "Dalam ejaan Badeng, hentian glotis ditulis sebagai huruf, bukan dengan tanda koma atas. Ejaan belum diseragamkan; catat apa yang ditulis oleh penutur."
+      "en": "The glottal stop is written as a letter.",
+      "ms": "Hentian glotis ditulis sebagai huruf."
     },
     "normalization": {
       "lowercase": true,
