@@ -1,0 +1,47 @@
+{
+  "language": "tst",
+  "entries": [
+    {
+      "id": "tst-s001",
+      "tokens": ["Alfa", "delta"],
+      "text": "Alfa delta.",
+      "gloss": {
+        "en": "A stone tree.",
+        "ms": "Pokok batu."
+      },
+      "dialect": "north",
+      "uses": ["tst-0001", "tst-0004"],
+      "sources": ["test-list"],
+      "constructed": false,
+      "status": "verified",
+      "review": [
+        {
+          "speaker": "SPK01",
+          "date": "2026-01-12",
+          "form": "Alfa delta.",
+          "verdict": "ok"
+        },
+        {
+          "speaker": "SPK02",
+          "date": "2026-01-12",
+          "form": "Alfa delta.",
+          "verdict": "ok"
+        }
+      ]
+    },
+    {
+      "id": "tst-s002",
+      "tokens": ["Golf", "charlie"],
+      "text": "Golf charlie?",
+      "gloss": {
+        "en": "A fish house?",
+        "ms": "Rumah ikan?"
+      },
+      "dialect": "south",
+      "uses": ["tst-0006", "tst-0003"],
+      "sources": ["test-notes"],
+      "constructed": false,
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "app": "old-test-app",
+  "map": {
+    "old:alfa": "tst-0001",
+    "old:golf": "tst-0006",
+    "old:gone": "tst-0095"
+  }
+}

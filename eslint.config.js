@@ -19,6 +19,10 @@ export default tseslint.config(
         tsconfigRootDir: import.meta.dirname,
       },
     },
+    rules: {
+      // `const { review, ...rest } = entry` is how the content build leaves fields out.
+      '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
+    },
   },
   {
     files: ['**/*.js'],
@@ -60,6 +64,12 @@ export default tseslint.config(
         },
       ],
     },
+  },
+  {
+    // `await act(async () => …)` is how tests let React finish suspended work,
+    // even when the callback itself awaits nothing.
+    files: ['**/*.test.{ts,tsx}'],
+    rules: { '@typescript-eslint/require-await': 'off' },
   },
   prettier,
 );

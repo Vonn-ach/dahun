@@ -1,0 +1,65 @@
+{
+  "code": "tst",
+  "name": {
+    "native": "Testish",
+    "en": "Testish",
+    "ms": "Bahasa Ujian"
+  },
+  "region": "Fixture data for the content scripts. Not a real language.",
+  "dialects": [
+    {
+      "id": "north",
+      "name": {
+        "en": "North Testish",
+        "ms": "Testish Utara"
+      }
+    },
+    {
+      "id": "south",
+      "name": {
+        "en": "South Testish",
+        "ms": "Testish Selatan"
+      }
+    },
+    {
+      "id": "shared",
+      "name": {
+        "en": "Shared",
+        "ms": "Umum"
+      },
+      "selectable": false
+    }
+  ],
+  "defaultDialect": "north",
+  "orthography": {
+    "highlight": ["'"],
+    "normalization": {
+      "lowercase": true,
+      "unifyApostrophes": ["’"],
+      "stripDiacritics": false,
+      "ignorePunctuation": "?!.,",
+      "ignoreInLooseMatch": ["'"]
+    }
+  },
+  "uiPhrases": {
+    "praise": "tst-0001",
+    "greeting": "tst-0005",
+    "thanks": "tst-0097"
+  },
+  "credits": {
+    "partner": null,
+    "speakers": [
+      {
+        "code": "SPK01",
+        "credit": "Anonymous",
+        "dialect": "north"
+      },
+      {
+        "code": "SPK02",
+        "credit": "Test Speaker Two",
+        "dialect": "south"
+      }
+    ]
+  },
+  "status": "draft"
+}

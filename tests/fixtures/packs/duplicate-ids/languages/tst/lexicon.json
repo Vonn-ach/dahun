@@ -1,0 +1,182 @@
+{
+  "language": "tst",
+  "sources": {
+    "test-list": {
+      "title": "Test word list",
+      "author": "Fixture Author",
+      "year": 2026,
+      "url": "https://example.org/list",
+      "licence": "Fixture data",
+      "notes": "Internal note that must not reach the bundle"
+    },
+    "test-notes": {
+      "title": "Test field notes",
+      "dialect": "south",
+      "licence": "Fixture data"
+    }
+  },
+  "entries": [
+    {
+      "id": "tst-0001",
+      "form": "alfa",
+      "kind": "word",
+      "pos": "noun",
+      "gloss": {
+        "en": "stone",
+        "ms": "batu"
+      },
+      "dialect": "north",
+      "sources": ["test-list"],
+      "constructed": false,
+      "status": "verified",
+      "review": [
+        {
+          "speaker": "SPK01",
+          "date": "2026-01-10",
+          "form": "alfa",
+          "verdict": "ok"
+        },
+        {
+          "speaker": "SPK02",
+          "date": "2026-01-11",
+          "form": "alfa",
+          "verdict": "ok"
+        }
+      ],
+      "audio": [
+        {
+          "file": "tst-0001__SPK01.m4a",
+          "speaker": "SPK01",
+          "form": "alfa",
+          "dialect": "north"
+        }
+      ]
+    },
+    {
+      "id": "tst-0002",
+      "form": "bravo'",
+      "kind": "word",
+      "pos": "noun",
+      "gloss": {
+        "en": "river",
+        "ms": "sungai"
+      },
+      "dialect": "shared",
+      "sources": ["test-list"],
+      "constructed": false,
+      "status": "verified",
+      "review": [
+        {
+          "speaker": "SPK01",
+          "date": "2026-01-10",
+          "form": "bravo'",
+          "verdict": "ok"
+        },
+        {
+          "speaker": "SPK02",
+          "date": "2026-01-11",
+          "form": "bravo'",
+          "verdict": "ok"
+        }
+      ]
+    },
+    {
+      "id": "tst-0003",
+      "form": "charlie",
+      "kind": "word",
+      "pos": "noun",
+      "gloss": {
+        "en": "house",
+        "ms": "rumah"
+      },
+      "dialect": "south",
+      "variants": [
+        {
+          "form": "charly",
+          "dialect": "north"
+        }
+      ],
+      "sources": ["test-notes"],
+      "constructed": false,
+      "status": "verified",
+      "review": [
+        {
+          "speaker": "SPK01",
+          "date": "2026-01-10",
+          "form": "charlie",
+          "verdict": "ok"
+        },
+        {
+          "speaker": "SPK02",
+          "date": "2026-01-11",
+          "form": "charlie",
+          "verdict": "ok"
+        }
+      ]
+    },
+    {
+      "id": "tst-0004",
+      "form": "delta",
+      "kind": "word",
+      "pos": "noun",
+      "gloss": {
+        "en": "tree",
+        "ms": "pokok"
+      },
+      "dialect": "north",
+      "sources": ["test-list"],
+      "constructed": false,
+      "status": "speaker-checked",
+      "review": [
+        {
+          "speaker": "SPK01",
+          "date": "2026-01-10",
+          "form": "delta",
+          "verdict": "ok"
+        }
+      ]
+    },
+    {
+      "id": "tst-0005",
+      "form": "echo foxtrot",
+      "kind": "phrase",
+      "pos": "phrase",
+      "gloss": {
+        "en": "good day",
+        "ms": "selamat siang"
+      },
+      "dialect": "shared",
+      "sources": ["test-list"],
+      "constructed": false,
+      "status": "draft"
+    },
+    {
+      "id": "tst-0006",
+      "form": "golf",
+      "kind": "word",
+      "pos": "noun",
+      "gloss": {
+        "en": "fish",
+        "ms": "ikan"
+      },
+      "dialect": "south",
+      "sources": ["test-notes"],
+      "constructed": false,
+      "status": "draft"
+    },
+    {
+      "id": "tst-0006",
+      "form": "hotel",
+      "kind": "word",
+      "pos": "noun",
+      "gloss": {
+        "en": "bird",
+        "ms": "burung"
+      },
+      "dialect": "south",
+      "sources": ["test-notes"],
+      "constructed": false,
+      "status": "draft"
+    }
+  ]
+}

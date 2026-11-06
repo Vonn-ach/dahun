@@ -1,0 +1,31 @@
+{
+  "language": "tst",
+  "units": [
+    {
+      "id": "basics",
+      "title": { "en": "Basics", "ms": "Asas" },
+      "taglineEntries": ["tst-0001"],
+      "lessons": [
+        {
+          "id": "basics-1",
+          "title": { "en": "Basics 1", "ms": "Asas 1" },
+          "introduce": ["tst-0001", "tst-0002", "tst-0003"],
+          "sentences": ["tst-s001"]
+        }
+      ]
+    },
+    {
+      "id": "more",
+      "title": { "en": "More", "ms": "Lagi" },
+      "taglineEntries": ["tst-0005"],
+      "lessons": [
+        {
+          "id": "more-1",
+          "title": { "en": "More 1", "ms": "Lagi 1" },
+          "introduce": ["tst-0004", "tst-0005", "tst-0006"],
+          "sentences": ["tst-s002"]
+        }
+      ]
+    }
+  ]
+}
